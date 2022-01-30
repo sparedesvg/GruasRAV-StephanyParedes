@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./estilos/style.css">
+    <title>Bootstrap</title>
+</head>
+<body class="cuerpo">
+    <!-- Inicio Header -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <!-- Inicio Logo -->
+              <section class="encabezado-logo">
+                  <a href="index.html"><img class="encabezado-logo-img" src="./imagenes/logo2.png" alt="Logo"></a>
+              </section>
+              <!-- Fin Logo -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link-rav" aria-current="page" href="#">Inicio</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Nosotros
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="./secciones/nosotros.html#mision">Misión</a></li>
+                      <li><a class="dropdown-item" href="./secciones/nosotros.html#vision">Visión</a></li>
+                      <li><a class="dropdown-item" href="./secciones/nosotros.html#historia">Historia</a></li>
+                      <li><a class="dropdown-item" href="./secciones/nosotros.html#equipo">Equipo</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Servicios
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="./secciones/servicios.html#asistencias">Asistencias</a></li>
+                      <li><a class="dropdown-item" href="./secciones/servicios.html#traslados">Traslados</a></li>
+                      <li><a class="dropdown-item" href="./secciones/servicios.html#rescates">Rescates</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./secciones/cotizar.html">Cotizar</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./secciones/contacto.html">Contacto</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Escribe aquí..." aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <!-- Fin Header -->
+    <!-- Inicio Bloque Azul -->
+    <div class="bloque-color-azul"></div>
+    <!-- Fin Bloque Azul -->
+    <!--Inicio Banner-->
+    <main class="banner">
+        <div class="banner-contenedor" id="display">
+            <img src="./imagenes/flota.jpg" class="banner-img" alt="Flota">
+            <div class="banner-contenedor-cta">
+                <h1 class="h1-banner">Somos Grúas RAV</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab laudantium accusantium eos qui, molestiae similique impedit ipsam. A sequi illo, ad quae officiis blanditiis vitae assumenda, delectus repellat eius nostrum?</p>
+                <button onclick="document.location='./secciones/cotizar.html'" class="button">Cotizar Gratis</button>
+            </div>
+        </div>
+    </main>
+    <!--Fin Banner-->
+    <!-- Inicio Sección 'Nuestros Servicios' -->
+    <section class="seccion-ns">
+        <!-- Inicio Seccion Título -->
+        <h1 class="eg-h1">Nuestros Servicios</h1>
+        <!-- Fin Sección Título -->
+        <!-- Inicio Grilla Servicios -->
+        <section class="seccion-ns-servicios">
+            <!-- Inicio Sección Asistencias -->
+            <div class="foto-asistencias">
+                <img src="./imagenes/asistencias.jpg" class="foto-asistencias" alt="Asistencias">
+            </div>
+            <div class="info-asistencias">
+                <div class="info-flex">
+                    <h2>Asistencias</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus fugiat explicabo magni optio odio nostrum totam expedita minima quam obcaecati, accusamus unde dolorum, asperiores laborum culpa necessitatibus autem assumenda odit.</p>
+                    <h3>Lista Asistencias</h3>
+                    <ul>
+                        <li>Elemento 1</li>
+                        <li>Elemento 2</li>
+                        <li>Elemento 3</li>
+                    </ul>
+                    <div>
+                        <button onclick="document.location='./secciones/servicios.html#asistencias'" class="button">Conocer más</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin Sección Asistencias -->
+            <!-- Inicio Sección Traslados -->
+            <div class="info-traslados">
+                <div class="info-flex">
+                    <h2>Traslados</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus fugiat explicabo magni optio odio nostrum totam expedita minima quam obcaecati, accusamus unde dolorum, asperiores laborum culpa necessitatibus autem assumenda odit.</p>
+                    <h3>Lista Traslados</h3>
+                    <ul>
+                        <li>Elemento 1</li>
+                        <li>Elemento 2</li>
+                        <li>Elemento 3</li>
+                    </ul>
+                    <div>
+                        <button onclick="document.location='./secciones/servicios.html#traslados'" class="button">Conocer más</button>
+                    </div>
+                </div>
+            </div>
+            <div class="foto-traslados">
+                <img src="./imagenes/traslados.jpg" class="foto-traslados" alt="Traslados">
+            </div>
+            <!-- Fin Sección Traslados -->
+            <!-- Inicio Sección Rescates -->
+            <div class="foto-rescates">
+                <img src="./imagenes/rescates.jpg" class="foto-rescates" alt="Rescates">
+            </div>
+            <div class="info-rescates">
+                <div class="info-flex">
+                    <h2>Rescates</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus fugiat explicabo magni optio odio nostrum totam expedita minima quam obcaecati, accusamus unde dolorum, asperiores laborum culpa necessitatibus autem assumenda odit.</p>
+                    <h3>Lista Rescates</h3>
+                    <ul>
+                        <li>Elemento 1</li>
+                        <li>Elemento 2</li>
+                        <li>Elemento 3</li>
+                    </ul>
+                    <div>
+                        <button onclick="document.location='./secciones/servicios.html#rescates'" class="button">Conocer más</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin Sección Rescates-->
+        </section>
+        <!-- Fin Grilla Servicios -->
+    </section>
+    <!-- Fin Sección 'Nuestros Servicios' -->
+    <!-- Inicio Sección 'Por Qué Escogernos' -->
+    <section class="seccion-pe">
+        <h1 class="eg-h1">¿Por qué escogernos?</h1>
+        <div class="info-flex">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, perspiciatis praesentium ipsum cum nihil doloremque odio officiis beatae velit quaerat labore. Dignissimos culpa quisquam quasi nulla quo ipsa delectus recusandae?</p>
+            <ul>
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+                <li>Elemento 3</li>
+            </ul>
+            <div>
+                <button onclick="document.location='./secciones/nosotros.html'" class="button">Conocer más</button>
+            </div>
+        </div>
+    </section>
+    <!-- Fin Sección 'Por Qué Escogernos' -->
+    <!-- Inicio Sección 'Dónde Estamos' -->
+    <section class="seccion-de">
+        <div class="seccion-de-contenedor-flex">
+            <h1 class="eg-h1">¿Dónde estamos?</h1>
+            <div class="info-flex">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nesciunt possimus minus? Quibusdam harum, dolore unde aspernatur itaque doloribus sapiente labore quisquam distinctio, voluptatibus temporibus minus et, accusantium ut totam?</p>
+            </div>
+            <!-- Inicio Ubicaciones -->
+            <section class="contenedor-ubicaciones">
+                <div class="ubicacion" id="display">
+                    <img class="ubicacion-img" src="./imagenes/santiago.jpg" alt="Santiago">
+                    <div class="ubicacion-cta">
+                        <p>Santiago</p>
+                        <button onclick="document.location='./secciones/contacto.html#santiago'" class="button">Conocer más</button>
+                    </div>
+                </div>
+                <div class="ubicacion" id="display">
+                    <img class="ubicacion-img" src="./imagenes/talca.jpg" alt="Talca">
+                    <div class="ubicacion-cta">
+                        <p>Talca</p>
+                        <button onclick="document.location='./secciones/contacto.html#talca'" class="button">Conocer más</button>
+                    </div>
+                </div>
+                <div class="ubicacion" id="display">
+                    <img class="ubicacion-img" src="./imagenes/temuco.jpg" alt="Temuco">
+                    <div class="ubicacion-cta">
+                        <p>Temuco</p>
+                        <button onclick="document.location='./secciones/contacto.html#temuco'" class="button">Conocer más</button>
+                    </div>
+                </div>
+            </section>
+            <!-- Fin Ubicaciones -->
+        </div>
+    </section>
+    <!-- Fin Sección 'Dónde Estamos' -->
+
+    <!-- Inicio Sección Footer -->
+    <section class="footer">
+        <section class="footer-contenedor-flex">
+            <article class="footer-logo-flex">
+                <a href="index.html"><img src="./imagenes/logo2.png" alt="logo" width="70px" height="60px"></a>
+                <div class="footer-logo-desc">
+                    <p>Su flota en buenas manos.</p>
+                </div>
+            </article>
+            <article>
+                <h1 class="footer-titulo-h1">Mapa del Sitio</h1>
+                <ul class="footer-lista">
+                    <li><a class="footer-link" href="index.html">Inicio</a></li>
+                    <li><a class="footer-link" href="./secciones/nosotros.html">Nosotros</a></li>
+                    <li><a class="footer-link" href="./secciones/servicios.html">Servicios</a></li>
+                    <li><a class="footer-link" href="./secciones/cotizar.html">Cotizar</a></li>
+                    <li><a class="footer-link" href="./secciones/contacto.html">Contacto</a></li>
+                </ul>
+            </article>
+
+            <!-- Contacto Inicio -->
+            <article>
+                <h1 class="footer-titulo-h1">Contacto</h1>
+                <div class="footer-contacto-icon-desc">
+                    <img class="footer-icon" src="./imagenes/email.png" alt="Correo">
+                    <p class="footer-desc">contacto@gruasrav.cl</p>
+                </div>
+                <div class="footer-contacto-icon-desc">
+                    <img class="footer-icon" src="./imagenes/phone.png" alt="Teléfono">
+                    <p class="footer-desc">(2) 2291 6151</p>
+                </div>
+                <div class="footer-contacto-icon-desc">
+                    <img class="footer-icon" src="./imagenes/location.png" alt="Ubicación">
+                    <p class="footer-desc">Tomás de Campanella 5434, San Joaquín,<br>Santiago, Chile</p>
+                </div>  
+            </article>
+            <!-- Contacto Fin -->
+
+            <!-- Redes Sociales Inicio -->
+            <article>
+                <h1 class="footer-titulo-h1">Redes Sociales</h1>
+                <ul class="footer-lista">
+                    <li><a class="footer-link" href="https://www.facebook.com/gruasravchile">Facebook</a></li>
+                    <li><a class="footer-link" href="https://www.instagram.com/gruasrav/">Instagram</a></li>
+                </ul>
+            </article>
+            <!-- Redes Sociales Fin -->
+        </section>
+    </section>
+    <!-- Fin Sección Footer -->
+</body>
+</html>

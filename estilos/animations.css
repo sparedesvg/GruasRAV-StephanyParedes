@@ -1,0 +1,76 @@
+/* The Image container */
+.img-hover-zoom {
+    height: 200px; /* Modify this according to your need */
+    overflow: hidden; /* Removing this will break the effects */
+}
+
+.img-hover-zoom img {
+    height: 100%; /* Modify this according to your need */
+    overflow: hidden; /* Removing this will break the effects */
+}
+
+.img-hover-zoom--quick-zoom img {
+    transform-origin: 0 0;
+    transition: transform .25s, visibility .25s ease-in;
+}
+  
+/* The Transformation */
+.img-hover-zoom--quick-zoom:hover img {
+    transform: scale(2);
+}
+
+.contenedor-foto-zoom{
+    display: block;
+    border-style: solid;
+    border-color: black;
+    background-color: tomato;
+}
+
+.contenedor-foto-zoom-2{
+    border-style: solid;
+    border-color: black;
+    background-color: red;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.contenedor-foto-zoom-2-img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenedor-foto-zoom-2 img{
+    transition: transform .5s ease-in-out;
+}
+
+.contenedor-foto-zoom-2:hover img {
+    transform: scale(2) rotate(25deg);
+}
+
+.contenedor-foto-zoom-3{
+    border-style: solid;
+    border-color: black;
+    background-color: red;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.contenedor-foto-zoom-3-img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenedor-foto-zoom-3 img{
+    transition: transform .5s ease-in-out;
+}
+
+.contenedor-foto-zoom-3:hover img {
+    transform: scale(2) rotate(25deg);
+}
+
