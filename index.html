@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./estilos/style.css">
-    <title>Bootstrap</title>
+    <title>Document</title>
 </head>
 <body class="cuerpo">
     <!-- Inicio Header -->
@@ -65,26 +65,22 @@
     </header>
     <!-- Fin Header -->
     <!-- Inicio Bloque Azul -->
-    <div class="bloque-color-azul"></div>
+    <div class="bloque-azul">Bloque Azul</div>
     <!-- Fin Bloque Azul -->
-    <!--Inicio Banner-->
+    <!-- Inicio Banner -->
     <main class="banner">
-        <div class="banner-contenedor" id="display">
-            <img src="./imagenes/flota.jpg" class="banner-img" alt="Flota">
-            <div class="banner-contenedor-cta">
-                <h2 class="texto-animado-fade-h2">Somos</h2>
-                <h1 class="texto-animado-zoom">Grúas RAV</h1>
-                <p class="texto-animado-fade">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab laudantium accusantium eos qui, molestiae similique impedit ipsam. A sequi illo, ad quae officiis blanditiis vitae assumenda, delectus repellat eius nostrum?</p>
-                <button onclick="document.location='./secciones/cotizar.html'" class="button">Cotizar Gratis</button>
-            </div>
+        <img src="./imagenes/flota.jpg" class="foto-ubicacion" alt="Flota">
+        <div class="banner-contenedor-cta">
+            <h2 class="texto-animado-fade-h2">Somos</h2>
+            <h1 class="texto-animado-zoom">Grúas RAV</h1>
+            <p class="texto-animado-fade">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab laudantium accusantium eos qui, molestiae similique impedit ipsam. A sequi illo, ad quae officiis blanditiis vitae assumenda, delectus repellat eius nostrum?</p>
+            <button onclick="document.location='./secciones/cotizar.html'" class="button">Cotizar Gratis</button>
         </div>
     </main>
-    <!--Fin Banner-->
-    <!-- Inicio Sección 'Nuestros Servicios' -->
+    <!-- Fin Banner -->
+    <!-- Inicio Sección 'Nuestros Servicios (NS)' -->
     <section class="seccion-ns">
-        <!-- Inicio Seccion Título -->
         <h1 class="eg-h1">Nuestros Servicios</h1>
-        <!-- Fin Sección Título -->
         <!-- Inicio Grilla Servicios -->
         <section class="seccion-ns-servicios">
             <!-- Inicio Sección Asistencias -->
@@ -150,8 +146,9 @@
         </section>
         <!-- Fin Grilla Servicios -->
     </section>
-    <!-- Fin Sección 'Nuestros Servicios' -->
-    <!-- Inicio Sección 'Por Qué Escogernos' -->
+
+    <!-- Fin Sección 'Nuestros Servicios (NS)' -->
+    <!-- Inicio Sección 'Por Qué Escogernos' (PE) -->
     <section class="seccion-pe">
         <h1 class="eg-h1">¿Por qué escogernos?</h1>
         <div class="info-flex">
@@ -166,92 +163,85 @@
             </div>
         </div>
     </section>
-    <!-- Fin Sección 'Por Qué Escogernos' -->
-    <!-- Inicio Sección 'Dónde Estamos' -->
+
+
+    <!-- Fin Sección 'Por Qué Escogernos' (PE) -->
+    <!-- Inicio Sección 'Dónde Estamos' (DE) -->
     <section class="seccion-de">
-        <div class="seccion-de-contenedor-flex">
-            <h1 class="eg-h1">¿Dónde estamos?</h1>
-            <div class="info-flex">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nesciunt possimus minus? Quibusdam harum, dolore unde aspernatur itaque doloribus sapiente labore quisquam distinctio, voluptatibus temporibus minus et, accusantium ut totam?</p>
-            </div>
-            <!-- Inicio Ubicaciones -->
-            <section class="contenedor-ubicaciones">
-                <div class="ubicacion" id="display">
-                    <img class="ubicacion-img" src="./imagenes/santiago.jpg" alt="Santiago">
-                    <div class="ubicacion-cta">
-                        <p>Santiago</p>
-                        <button onclick="document.location='./secciones/contacto.html#santiago'" class="button">Conocer más</button>
-                    </div>
-                </div>
-                <div class="ubicacion" id="display">
-                    <img class="ubicacion-img" src="./imagenes/talca.jpg" alt="Talca">
-                    <div class="ubicacion-cta">
-                        <p>Talca</p>
-                        <button onclick="document.location='./secciones/contacto.html#talca'" class="button">Conocer más</button>
-                    </div>
-                </div>
-                <div class="ubicacion" id="display">
-                    <img class="ubicacion-img" src="./imagenes/temuco.jpg" alt="Temuco">
-                    <div class="ubicacion-cta">
-                        <p>Temuco</p>
-                        <button onclick="document.location='./secciones/contacto.html#temuco'" class="button">Conocer más</button>
-                    </div>
-                </div>
-            </section>
-            <!-- Fin Ubicaciones -->
+        <h1 class="eg-h1">¿Dónde estamos?</h1>
+        <div class="info-flex">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nesciunt possimus minus? Quibusdam harum, dolore unde aspernatur itaque doloribus sapiente labore quisquam distinctio, voluptatibus temporibus minus et, accusantium ut totam?</p>
         </div>
-    </section>
-    <!-- Fin Sección 'Dónde Estamos' -->
-
-    <!-- Inicio Sección Footer -->
-    <section class="footer">
-        <section class="footer-contenedor-flex">
-            <article class="footer-logo-flex">
-                <a href="index.html"><img src="./imagenes/logo2.png" alt="logo" width="70px" height="60px"></a>
-                <div class="footer-logo-desc">
-                    <p>Su flota en buenas manos.</p>
+        <!-- Inicio Ubicaciones -->
+        <section class="seccion-de-ubicaciones">
+            <div class="foto-santiago">
+                <img src="./imagenes/santiago.jpg" class="foto-ubicacion" alt="Santiago">
+                <div class="ubicacion-cta">
+                    <p>Santiago</p>
+                    <button onclick="document.location='./secciones/contacto.html#santiago'" class="button">Conocer más</button>
                 </div>
-            </article>
-            <article>
-                <h1 class="footer-titulo-h1">Mapa del Sitio</h1>
-                <ul class="footer-lista">
-                    <li><a class="footer-link" href="index.html">Inicio</a></li>
-                    <li><a class="footer-link" href="./secciones/nosotros.html">Nosotros</a></li>
-                    <li><a class="footer-link" href="./secciones/servicios.html">Servicios</a></li>
-                    <li><a class="footer-link" href="./secciones/cotizar.html">Cotizar</a></li>
-                    <li><a class="footer-link" href="./secciones/contacto.html">Contacto</a></li>
-                </ul>
-            </article>
-
-            <!-- Contacto Inicio -->
-            <article>
-                <h1 class="footer-titulo-h1">Contacto</h1>
-                <div class="footer-contacto-icon-desc">
-                    <img class="footer-icon" src="./imagenes/email.png" alt="Correo">
-                    <p class="footer-desc">contacto@gruasrav.cl</p>
+            </div>
+            <div class="foto-talca">
+                <img src="./imagenes/talca.jpg" class="foto-ubicacion" alt="Talca">
+                <div class="ubicacion-cta">
+                    <p>Talca</p>
+                    <button onclick="document.location='./secciones/contacto.html#talca'" class="button">Conocer más</button>
                 </div>
-                <div class="footer-contacto-icon-desc">
-                    <img class="footer-icon" src="./imagenes/phone.png" alt="Teléfono">
-                    <p class="footer-desc">(2) 2291 6151</p>
+            </div>
+            <div class="foto-temuco">
+                <img src="./imagenes/temuco.jpg" class="foto-ubicacion" alt="Temuco">
+                <div class="ubicacion-cta">
+                    <p>Temuco</p>
+                    <button onclick="document.location='./secciones/contacto.html#temuco'" class="button">Conocer más</button>
                 </div>
-                <div class="footer-contacto-icon-desc">
-                    <img class="footer-icon" src="./imagenes/location.png" alt="Ubicación">
-                    <p class="footer-desc">Tomás de Campanella 5434, San Joaquín,<br>Santiago, Chile</p>
-                </div>  
-            </article>
-            <!-- Contacto Fin -->
-
-            <!-- Redes Sociales Inicio -->
-            <article>
-                <h1 class="footer-titulo-h1">Redes Sociales</h1>
-                <ul class="footer-lista">
-                    <li><a class="footer-link" href="https://www.facebook.com/gruasravchile">Facebook</a></li>
-                    <li><a class="footer-link" href="https://www.instagram.com/gruasrav/">Instagram</a></li>
-                </ul>
-            </article>
-            <!-- Redes Sociales Fin -->
+            </div>
         </section>
+        <!-- Fin Ubicaciones -->
     </section>
-    <!-- Fin Sección Footer -->
+    <!-- Fin Sección 'Dónde Estamos' (DE) -->
+    <!-- Inicio Footer -->
+    <footer class="footer">
+        <section class="logo">
+            <a href="index.html"><img src="./imagenes/logo2.png" alt="logo" width="70px" height="60px"></a>
+            <p class="footer-logo-desc">Su flota en buenas manos.</p>
+        </section>
+        <section class="mapa-sitio">
+            <h1 class="footer-titulo-h1">Mapa del Sitio</h1>
+            <ul class="footer-lista">
+                <li><a class="footer-link" href="index.html">Inicio</a></li>
+                <li><a class="footer-link" href="./secciones/nosotros.html">Nosotros</a></li>
+                <li><a class="footer-link" href="./secciones/servicios.html">Servicios</a></li>
+                <li><a class="footer-link" href="./secciones/cotizar.html">Cotizar</a></li>
+                <li><a class="footer-link" href="./secciones/contacto.html">Contacto</a></li>
+            </ul>
+        </section>
+        <section class="contacto">
+            <h1 class="footer-titulo-h1">Contacto</h1>
+            <div class="footer-contacto-icon-desc">
+                <img class="footer-icon" src="./imagenes/email.png" alt="Correo">
+                <p class="footer-desc">contacto@gruasrav.cl</p>
+            </div>
+            <div class="footer-contacto-icon-desc">
+                <img class="footer-icon" src="./imagenes/phone.png" alt="Teléfono">
+                <p class="footer-desc">(2) 2291 6151</p>
+            </div>
+            <div class="footer-contacto-icon-desc">
+                <img class="footer-icon" src="./imagenes/location.png" alt="Ubicación">
+                <p class="footer-desc">Tomás de Campanella 5434, San Joaquín, Stgo., CL</p>
+            </div>  
+        </section>
+        <section class="rr-ss">
+            <h1 class="footer-titulo-h1">Redes Sociales</h1>
+            <div class="footer-contacto-icon-desc">
+                <img src="./imagenes/facebook.png" class="footer-icon" alt="Facebook">
+                <p class="footer-desc"><a class="footer-link" href="https://www.facebook.com/gruasravchile">Facebook</a></p>
+            </div> 
+            <div class="footer-contacto-icon-desc">
+                <img src="./imagenes/instagram.png" class="footer-icon" alt="Instagram">
+                <p class="footer-desc"><a class="footer-link" href="https://www.instagram.com/gruasrav/">Instagram</a></p>
+            </div> 
+        </section>
+    </footer>
+    <!-- Fin Footer -->
 </body>
 </html>

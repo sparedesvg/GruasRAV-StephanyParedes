@@ -4,21 +4,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 /*Fin Fuentes*/
 
-/*Inicio Reseteo*/
 *{
+    margin: 0;
     padding: 0;
-    margin: 0px;
 }
-/*Fin Reseteo*/
 
-/*Inicio Layout con Grids*/
+body, html {
+    height: 100vh;
+}
+
+/*Inicio Layout Index con Grids*/
 .cuerpo{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 66px 20px 800px 1fr 260px 450px 300px;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 5% auto auto auto auto auto;
     grid-template-areas: 
     "header"
-    "bloque-color-azul"
+    "bloque-azul"
     "banner"
     "seccion-ns"
     "seccion-pe"
@@ -29,17 +31,18 @@
 
 .header{
     grid-area: header; 
-    background-color: aqua; 
+    background-color: aqua;
 }
 
-.bloque-color-azul{
-    grid-area: bloque-color-azul;
-    padding: 10px;
+.bloque-azul{
+    grid-area: bloque-azul;
     background-color: #005c99;
+    color: white;
 }
 
 .banner{
     grid-area: banner;
+    position: relative;
 }
 
 .seccion-ns{
@@ -56,37 +59,43 @@
 
 .footer{
     grid-area: footer;
+}
+/*Fin Layout Index con Grids*/
+
+/*Servicios*/
+.cuerpo-servicios{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 5% auto auto;
+    grid-template-areas: 
+    "s-header"
+    "s-bloque-azul"
+    "s-seccion-ns"
+    "footer"
+    ;
+}
+
+.s-header{
+    grid-area: s-header; 
+    background-color: aqua;
+}
+
+.s-bloque-azul{
+    grid-area: s-bloque-azul;
     background-color: #005c99;
-}
-/*Fin Layout con Grids*/
-
-/*Seccion Encabezado Inicio*/
-.encabezado-contenedor-flex-1{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    margin: 0px;
-    padding: 0px;
-    text-align: center;
+    color: white;
 }
 
-.encabezado-contenedor-flex-2{
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    width: 48%;
-    padding: 0px;
+.s-seccion-ns{
+    grid-area: s-seccion-ns;
 }
 
-.encabezado-contenedor-flex-3{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-end;
-    align-items: center;
-    width: 48%;
-    padding: 0px;
+.footer{
+    grid-area: footer;
 }
+/*Servicio*/
 
+/*Inicio Estilos Encabezado*/
 .encabezado-logo{
     width: 60px;
     height: 50px;
@@ -99,99 +108,221 @@
     object-fit: cover;
 }
 
-.encabezado-navegacion{
-    margin-left: 50px;
-}
-
-.encabezado-lista {
-    list-style-type: none;
-}
-
-.encabezado-lista li{
-    display: inline-block;
-    padding: 20px;
-    list-style-type: none;
-}
-
-.encabezado-lista li:hover {
-    display: inline-block;
-    padding: 20px;
-    list-style-type: none;
-    background-color: #e6eff5;
-}
-
-.encabezado-link {
-    font-family: 'Rubik';
-    font-weight: 400;
-    font-size: 15px;
-    color: #004a7a;
-    text-align: center;
-    text-decoration: none;
-    line-height: 30px;
-}
-
-.encabezado-link:visited {
-    font-family: 'Rubik';
-    font-weight: 400;
-    font-size: 15px;
+.nav-link-rav{
+    display: block;
+    padding: 0.5rem 1rem;
     color: #005c99;
-    text-align: center;
     text-decoration: none;
-    line-height: 30px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 }
-/*Seccion Encabezado Fin*/
+/*Fin Estilos Encabezado*/
 
-/*Inicio Banner*/
-.h1-banner{
-    color: white;
-    font-family: 'Open Sans';
-    font-weight: 800;
-    font-size: 75px;
-}
-.banner-contenedor{
-    position: relative;
-}
-
-.banner-img{
-    width: 100%;
-    object-fit: cover;
-}
-
+/*Inicio Estilos Banner*/
 .banner-contenedor-cta {
+    width: 50%;
+    height: 50%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    background-color: rgba(85, 85, 85, 0.349);
     font-family: 'Open Sans';
     font-weight: 800;
-    font-size: 30px;
+    font-size: 1.875rem;
     text-align: center;
     padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 .banner-contenedor-cta p{
     font-family: 'Rubik';
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.3rem;
     color: white;
+    text-shadow: 2px 2px #00000096;
     text-align: center;
     margin-bottom: 10px;
+    padding-top: 20px;
 }
-/*Fin Banner*/
+/*Fin Estilos Banner*/
 
-/*Inicio Grilla Servicios*/
+/*Inicio Animaciones Banner*/
+/*Animaciones*/
+.texto-animado-fade-h2{
+    font-family: 'Open Sans';
+    font-weight: 200;
+    text-shadow: 2px 2px #00000096;
+    animation-duration: 2s;
+    animation-name: fade;
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.texto-animado-fade{
+    animation-duration: 2s;
+    animation-name: fade;
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.texto-animado-zoom{
+    font-family: 'Open Sans';
+    font-weight: 800;
+    text-shadow: 2px 2px #00000096;
+    animation-name: zoom;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoom{
+    0% {opacity:0;}
+    100% {opacity:1;}
+
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(2);
+    }
+}
+/*Fin Animaciones Banner*/
+
+/*Inicio Media Queries para Banner*/
+@media(max-width:576px){
+    .banner-contenedor-cta{
+        height: 75%;
+    }
+    .banner-contenedor-cta p{
+        font-size: 0.6rem;
+    }
+
+    .texto-animado-fade-h2{
+        font-family: 'Open Sans';
+        font-weight: 800;
+        font-size: 0.9rem;
+        animation-duration: 2s;
+        animation-name: fade;
+    }
+
+    .texto-animado-zoom{
+        font-family: 'Open Sans';
+        font-weight: 800;
+        font-size: 0.9rem;
+        animation-name: zoom;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@media(min-width:577px) and (max-width:768px){
+    .banner-contenedor-cta{
+        height: 75%;
+    }
+    .banner-contenedor-cta p{
+        font-size: 0.9rem;
+    }
+
+    .texto-animado-fade-h2{
+        font-family: 'Open Sans';
+        font-weight: 800;
+        font-size: 1.3rem;
+        animation-duration: 2s;
+        animation-name: fade;
+    }
+
+    .texto-animado-zoom{
+        font-family: 'Open Sans';
+        font-weight: 800;
+        font-size: 1.3rem;
+        animation-name: zoom;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+}
+@media(min-width:769px) and (max-width:992px){
+    .banner-contenedor-cta{
+        height: 75%;
+    }
+    .banner-contenedor-cta p{
+        font-size: 1.3rem;
+    }
+
+    .texto-animado-fade-h2{
+        font-family: 'Open Sans';
+        font-weight: 800;
+        font-size: 1.6rem;
+        animation-duration: 2s;
+        animation-name: fade;
+    }
+
+    .texto-animado-zoom{
+        font-family: 'Open Sans';
+        font-weight: 800;
+        font-size: 1.6rem;
+        animation-name: zoom;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@media(min-width:993px){
+    .banner-contenedor-cta{
+        height: 75%;
+    }
+    .banner-contenedor-cta p{
+        font-size: 1.6rem;
+    }
+    .texto-animado-fade-h2{
+        font-family: 'Open Sans';
+        font-weight: 800;
+        font-size: 1.875rem;
+        animation-duration: 2s;
+        animation-name: fade;
+    }
+    .texto-animado-zoom{
+        font-family: 'Open Sans';
+        font-weight: 800;
+        font-size: 1.875rem;
+        animation-name: zoom;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+}
+/*Fin Media Queries para Banner*/
+
+
+/*Inicio Layout Sección 'Nuestros Servicios' con Grids*/
 .seccion-ns-servicios{
     display: grid;
-    grid-template-columns: repeat(2,50%);
-    grid-template-rows: repeat(3,33.3%);
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6,auto);
     grid-column-gap: 0%;
     grid-row-gap: 0%;
     grid-template-areas: 
-    "foto-asistencias   info-asistencias"
-    "info-traslados     foto-traslados"
-    "foto-rescates      info-rescates"
+    "info-asistencias"
+    "foto-asistencias"
+    "info-traslados"
+    "foto-traslados"
+    "info-rescates"
+    "foto-rescates"
     ;
 }
 
@@ -245,13 +376,253 @@
     align-items: center;
     align-content: center;
 }
-/*Fin Grilla Servicios*/
+/*Fin Layout Sección 'Nuestros Servicios' con Grids*/
 
-/*Inicio Estilo General*/
+/*Inicio Media Query para Seccion 'Nuestros Servicios*/
+@media(min-width:768px){
+    .seccion-ns-servicios{
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        grid-template-rows: repeat(3,33.3%);
+        grid-column-gap: 0%;
+        grid-row-gap: 0%;
+        grid-template-areas: 
+        "foto-asistencias   info-asistencias"
+        "info-traslados     foto-traslados"
+        "foto-rescates      info-rescates"
+        ;
+    }
+}
+/*Fin Media Query para Seccion 'Nuestros Servicios*/
+
+/*Inicio Layout Seccion 'Donde Estamos' con Grids*/
+.seccion-de-ubicaciones{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3,auto);
+    grid-column-gap: 0%;
+    grid-row-gap: 0%;
+    grid-template-areas: 
+    "foto-santiago"
+    "foto-talca"
+    "foto-temuco"
+    ;
+}
+
+.foto-santiago{
+    grid-area: foto-santiago;
+    position: relative;
+    background-color: red;
+}
+
+.foto-talca{
+    grid-area: foto-talca;
+    position: relative;
+    background-color: blue;
+}
+
+.foto-temuco{
+    grid-area: foto-temuco;
+    position: relative;
+    background-color: orange;
+
+}
+/*Fin Layout Seccion 'Donde Estamos' con Grids*/
+
+.foto-ubicacion{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Inicio Media Query para Seccion 'Donde Estamos*/
+@media(min-width:768px){
+    .seccion-de-ubicaciones{
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+        grid-template-rows: 100%;
+        grid-column-gap: 0%;
+        grid-row-gap: 0%;
+        grid-template-areas: 
+        "foto-santiago  foto-talca  foto-temuco"
+        ;
+    }
+}
+/*Fin Media Query para Seccion 'Donde Estamos*/
+
+/*Inicio Estilos de Seccion 'Donde Estamos'*/
+.ubicacion-cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Open Sans';
+    font-weight: 800;
+    font-size: 1.875rem;
+    text-align: center;
+    margin: 0%;
+}
+/*Fin Estilos de Seccion 'Donde Estamos'*/
+
+/*Inicio Layout Seccion 'Footer' con Grids*/
+.footer{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4,auto);
+    grid-column-gap: 0%;
+    grid-row-gap: 0%;
+    grid-template-areas: 
+    "logo"
+    "mapa-sitio"
+    "contacto"
+    "rr-ss"
+    ;
+}
+
+.logo{
+    grid-area: logo;
+    background-color: #005c99;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapa-sitio{
+    grid-area: mapa-sitio;
+    background-color: #005c99;
+}
+
+.contacto{
+    grid-area: contacto;
+    background-color: #005c99;
+}
+
+.rr-ss{
+    grid-area: rr-ss;
+    background-color: #005c99;
+
+}
+/*Fin Layout Seccion 'Donde Estamos' con Grids*/
+
+/*Inicio Media Query para Footer*/
+@media(min-width:768px){
+    .footer{
+        display: grid;
+        grid-template-columns: repeat(4,auto);
+        grid-template-rows: 100%;
+        grid-column-gap: 0%;
+        grid-row-gap: 0%;
+        grid-template-areas: 
+        "logo   mapa-sitio  contacto    rr-ss"
+        ;
+    }
+}
+/*Fin Media Query para Footer*/
+
+/*Inicio Estilos de Footer*/
+.footer-logo-desc {
+    margin-top: 20px;
+    font-family: Rubik;
+    font-weight: 400;
+    font-size: 1rem;
+    font-style: italic;
+    color: white;
+}
+
+.footer-titulo-h1 {
+    text-align: left;
+    font-family: 'Open Sans';
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: white;
+    margin: 0%;
+}
+
+.footer-lista {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    text-align: right;
+    font-family: Rubik;
+    font-size: 1rem;
+    line-height: 15px;
+    list-style: none;
+    padding: 0%;
+    color: white;
+}
+
+.footer-lista li{
+    text-align: center;
+    font-family: Rubik;
+    font-size: 1rem;
+    line-height: 15px;
+    list-style: none;
+    color: white;
+}
+
+.footer-contacto-icon-desc {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.footer-icon {
+    width: 25px;
+    object-fit: contain;
+    margin-left: 0px;
+}
+
+.footer-desc {
+    padding: 10px;
+    text-align: left;
+    margin-right: 10px;
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 1rem;
+    color: white;
+}
+
+.footer-link {
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    line-height: 30px;
+}
+
+.footer-link:hover {
+    background-color: #e6eff5;
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 1rem;
+    color: #00375c;
+    text-align: center;
+    text-decoration: none;
+    line-height: 30px;   
+}
+
+.footer-link:visited {
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    line-height: 30px;
+}
+/*Fin Estilos de Footer*/
+
+/*Inicio Estilos Generales*/
 .eg-h1{
     font-family: 'Open Sans';
     font-weight: 800;
-    font-size: 30px;
+    font-size: 1.875rem;
     color: #00375c;
     text-align: center;
     padding: 10px;
@@ -266,7 +637,7 @@
     color: #fff;
     display: inline-block;
     font-family: 'Rubik';
-    font-size: 14px;
+    font-size: 0.9rem;
     font-weight: 500;
     height: 40px;
     letter-spacing: normal;
@@ -292,7 +663,7 @@
     text-align: center;
     font-family: 'Open Sans';
     font-weight: 800;
-    font-size: 22px;
+    font-size: 1.375rem;
     color: #00375c;
     margin: 0%;
 }
@@ -301,7 +672,7 @@
     text-align: center;
     font-family: 'Open Sans';
     font-weight: 800;
-    font-size: 18px;
+    font-size: 1.1rem;
     color: #00375c;
     margin: 0%;
 }
@@ -310,7 +681,7 @@
     text-align: center;
     line-height: 20px;
     font-family: Rubik;
-    font-size: 14px;
+    font-size: 0.9rem;
     color: #00375c;
     padding: 5px;
     width: 75%;
@@ -320,188 +691,18 @@
 .info-flex ul{
     text-align: justify;
     font-family: Rubik;
-    font-size: 14px;
+    font-size: 0.9rem;
     color: #00375c;
     padding: 15px;
     line-height: 20px;
     list-style: none;
     margin: 0%;
 }
-
-#display img{
-    display: block;
-}
-/*Inicio Estilo General*/
-
-/*Inicio Ubicaciones*/
-.seccion-de-contenedor-flex{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    margin: 0%;
-}
-
-.contenedor-ubicaciones {
-    display: flex;
-    background-color: orange;
-}
-
-.ubicacion{
-    display: block;
-    position: relative;
-    width: 33.33%;
-    text-align: center;
-}
-
-.ubicacion-img {
-    width: 100%;
-}
-
-.ubicacion-cta {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-family: 'Open Sans';
-    font-weight: 800;
-    font-size: 30px;
-    text-align: center;
-    margin: 0%;
-}
-/*Fin Ubicaciones*/
-
-/*Inicio Footer*/
-.footer-contenedor-flex {
-    display: flex;
-    flex-flow: row wrap; 
-    justify-content: space-around;
-    align-items: stretch;
-    align-content: stretch;
-    width: 100%;
-    margin-top: 50px;
-}
-
-.footer-logo-flex{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.footer-logo-desc {
-    margin-top: 20px;
-    font-family: Rubik;
-    font-weight: 400;
-    font-size: 16px;
-    font-style: italic;
-    color: white;
-}
-
-.footer-titulo-h1 {
-    text-align: left;
-    font-family: 'Open Sans';
-    font-weight: 800;
-    font-size: 20px;
-    color: white;
-    margin: 0%;
-}
-
-.footer-lista {
-    display: flex;
-    flex-flow: column;
-    justify-content: flex-start;
-    align-content: flex-start;
-    align-items: flex-start;
-    text-align: right;
-    font-family: Rubik;
-    font-size: 16px;
-    line-height: 15px;
-    list-style: none;
-    padding: 0%;
-    color: white;
-}
-
-.footer-lista li{
-    text-align: center;
-    font-family: Rubik;
-    font-size: 16px;
-    line-height: 15px;
-    list-style: none;
-    color: white;
-}
-
-.footer-contacto-icon-desc {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-}
-
-.footer-icon {
-    width: 25px;
-    object-fit: contain;
-    margin-left: 0px;
-}
-
-.footer-desc {
-    padding: 10px;
-    text-align: left;
-    margin-right: 10px;
-    font-family: 'Rubik';
-    font-weight: 400;
-    font-size: 16px;
-    color: white;
-}
-
-.footer-link {
-    font-family: 'Rubik';
-    font-weight: 400;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    line-height: 30px;
-}
-
-.footer-link:hover {
-    background-color: #e6eff5;
-    font-family: 'Rubik';
-    font-weight: 400;
-    font-size: 16px;
-    color: #00375c;
-    text-align: center;
-    text-decoration: none;
-    line-height: 30px;   
-}
-
-.footer-link:visited {
-    font-family: 'Rubik';
-    font-weight: 400;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    line-height: 30px;
-}
-/*Fin Footer*/
+/*Fin Estilos Generales*/
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-/*Estilos Desafío Entrega Anterior*/
+/*Estilos Desafíos Anteriores*/
 /*Inicio Estilo General*/
 ul {
     list-style: none;
@@ -897,15 +1098,7 @@ ul {
 }
 /*Fin Estilo Footer*/
 
-
 /*Inicio estilos agregados durante desafio #4*/
-.nav-link-rav{
-    display: block;
-    padding: 0.5rem 1rem;
-    color: #005c99;
-    text-decoration: none;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
-}
 
 .contenedor-contacto{
     background-color: white;
@@ -945,54 +1138,3 @@ ul {
     margin: 0%;
 }
 /*Fin estilos agregados durante desafio #4*/
-
-/*Animaciones*/
-.texto-animado-fade-h2{
-    font-family: 'Open Sans';
-    font-weight: 800;
-    animation-duration: 2s;
-    animation-name: fade;
-}
-
-@keyframes fade{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-
-.texto-animado-fade{
-    animation-duration: 2s;
-    animation-name: fade;
-}
-
-@keyframes fade{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-
-.texto-animado-zoom{
-    font-family: 'Open Sans';
-    font-weight: 800;
-    animation-name: zoom;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes zoom{
-    0% {opacity:0;}
-    100% {opacity:1;}
-
-    from{
-        transform: scale(1);
-    }
-    to{
-        transform: scale(2);
-    }
-}

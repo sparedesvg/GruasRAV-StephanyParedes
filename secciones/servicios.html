@@ -4,47 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../estilos/style.css">
-    <title>Grids</title>
+    <title>Servicios</title>
 </head>
 <body class="cuerpo-servicios">
     <!-- Inicio Header -->
-    <header class="encabezado-contenedor-flex-1">
-        <section class="encabezado-contenedor-flex-2">
-            <!-- Inicio Logo -->
-            <section class="encabezado-logo">
-                <a href="../index.html"><img class="encabezado-logo-img" src="../imagenes/logo.jpg" alt="Logo"></a>
-            </section>
-            <!-- Fin Logo -->
-            <!-- Inicio Navegación -->
-            <section class="encabezado-navegacion">
-                <ul class="encabezado-lista">
-                    <li><a class="encabezado-link" href="../index.html">Inicio</a></li>
-                    <li><a class="encabezado-link" href="nosotros.html">Nosotros</a></li>
-                    <li><a class="encabezado-link" href="servicios.html">Servicios</a></li>
-                    <li><a class="encabezado-link" href="cotizar.html">Cotizar</a></li>
-                    <li><a class="encabezado-link" href="contacto.html">Contacto</a></li>
+    <header class="s-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <!-- Inicio Logo -->
+              <section class="encabezado-logo">
+                  <a href="../index.html"><img class="encabezado-logo-img" src="../imagenes/logo2.png" alt="Logo"></a>
+              </section>
+              <!-- Fin Logo -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link-rav" aria-current="page" href="../index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Nosotros
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="nosotros.html#mision">Misión</a></li>
+                      <li><a class="dropdown-item" href="nosotros.html#vision">Visión</a></li>
+                      <li><a class="dropdown-item" href=".nosotros.html#historia">Historia</a></li>
+                      <li><a class="dropdown-item" href=".nosotros.html#equipo">Equipo</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Servicios
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="servicios.html#asistencias">Asistencias</a></li>
+                      <li><a class="dropdown-item" href="servicios.html#traslados">Traslados</a></li>
+                      <li><a class="dropdown-item" href="servicios.html#rescates">Rescates</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="cotizar.html">Cotizar</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                  </li>
                 </ul>
-            </section>
-            <!-- Fin Navegación -->
-        </section>
-        <!-- Inicio Botón -->
-        <section class="encabezado-contenedor-flex-3">
-            <div>
-                <button onclick="document.location='./secciones/cotizar.html'" class="button">Cotizar Gratis</button>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Escribe aquí..." aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+              </div>
             </div>
-        </section>
-        <!-- Fin Botón -->
+          </nav>
     </header>
     <!-- Fin Header -->
     <!-- Inicio Bloque Azul -->
-    <div class="bloque-color-azul"></div>
+    <div class="s-bloque-azul">Bloque Azul</div>
     <!-- Fin Bloque Azul -->
-    <!-- Inicio Sección 'Nuestros Servicios' -->
-    <section class="seccion-ns">
-        <!-- Inicio Seccion Título -->
+    <!-- Inicio Sección 'Nuestros Servicios (NS)' -->
+    <section class="s-seccion-ns">
         <h1 class="eg-h1">Nuestros Servicios</h1>
-        <!-- Fin Sección Título -->
         <!-- Inicio Grilla Servicios -->
         <section class="seccion-ns-servicios">
             <!-- Inicio Sección Asistencias -->
@@ -62,7 +87,7 @@
                         <li>Elemento 3</li>
                     </ul>
                     <div>
-                        <button onclick="document.location='./s'" class="button">Conocer más</button>
+                        <button onclick="document.location='./secciones/servicios.html#asistencias'" class="button">Conocer más</button>
                     </div>
                 </div>
             </div>
@@ -79,7 +104,7 @@
                         <li>Elemento 3</li>
                     </ul>
                     <div>
-                        <button onclick="document.location='./s'" class="button">Conocer más</button>
+                        <button onclick="document.location='./secciones/servicios.html#traslados'" class="button">Conocer más</button>
                     </div>
                 </div>
             </div>
@@ -102,7 +127,7 @@
                         <li>Elemento 3</li>
                     </ul>
                     <div>
-                        <button onclick="document.location='./s'" class="button">Conocer más</button>
+                        <button onclick="document.location='./secciones/servicios.html#rescates'" class="button">Conocer más</button>
                     </div>
                 </div>
             </div>
@@ -110,56 +135,50 @@
         </section>
         <!-- Fin Grilla Servicios -->
     </section>
-    <!-- Fin Sección 'Nuestros Servicios' -->
-    <!-- Inicio Sección Footer -->
-    <section class="footer">
-        <section class="footer-contenedor-flex">
-            <article class="footer-logo-flex">
-                <a href="../index.html"><img src="../imagenes/logo2.png" alt="logo" width="70px" height="60px"></a>
-                <div class="footer-logo-desc">
-                    <p>Su flota en buenas manos.</p>
-                </div>
-            </article>
-            <article>
-                <h1 class="footer-titulo-h1">Mapa del Sitio</h1>
-                <ul class="footer-lista">
-                    <li><a class="footer-link" href="../index.html">Inicio</a></li>
-                    <li><a class="footer-link" href="nosotros.html">Nosotros</a></li>
-                    <li><a class="footer-link" href="servicios.html">Servicios</a></li>
-                    <li><a class="footer-link" href="cotizar.html">Cotizar</a></li>
-                    <li><a class="footer-link" href="contacto.html">Contacto</a></li>
-                </ul>
-            </article>
-
-            <!-- Contacto Inicio -->
-            <article>
-                <h1 class="footer-titulo-h1">Contacto</h1>
-                <div class="footer-contacto-icon-desc">
-                    <img class="footer-icon" src="../imagenes/email.png" alt="Correo">
-                    <p class="footer-desc">contacto@gruasrav.cl</p>
-                </div>
-                <div class="footer-contacto-icon-desc">
-                    <img class="footer-icon" src="../imagenes/phone.png" alt="Teléfono">
-                    <p class="footer-desc">(2) 2291 6151</p>
-                </div>
-                <div class="footer-contacto-icon-desc">
-                    <img class="footer-icon" src="../imagenes/location.png" alt="Ubicación">
-                    <p class="footer-desc">Tomás de Campanella 5434, San Joaquín,<br>Santiago, Chile</p>
-                </div>  
-            </article>
-            <!-- Contacto Fin -->
-
-            <!-- Redes Sociales Inicio -->
-            <article>
-                <h1 class="footer-titulo-h1">Redes Sociales</h1>
-                <ul class="footer-lista">
-                    <li><a class="footer-link" href="https://www.facebook.com/gruasravchile">Facebook</a></li>
-                    <li><a class="footer-link" href="https://www.instagram.com/gruasrav/">Instagram</a></li>
-                </ul>
-            </article>
-            <!-- Redes Sociales Fin -->
+    <!-- Fin Sección 'Nuestros Servicios (NS)' -->
+    <!-- Inicio Footer -->
+    <footer class="footer">
+        <section class="logo">
+            <a href="../index.html"><img src="../imagenes/logo2.png" alt="logo" width="70px" height="60px"></a>
+            <p class="footer-logo-desc">Su flota en buenas manos.</p>
         </section>
-    </section>
-    <!-- Fin Sección Footer -->
+        <section class="mapa-sitio">
+            <h1 class="footer-titulo-h1">Mapa del Sitio</h1>
+            <ul class="footer-lista">
+                <li><a class="footer-link" href="../index.html">Inicio</a></li>
+                <li><a class="footer-link" href="nosotros.html">Nosotros</a></li>
+                <li><a class="footer-link" href="servicios.html">Servicios</a></li>
+                <li><a class="footer-link" href="cotizar.html">Cotizar</a></li>
+                <li><a class="footer-link" href="contacto.html">Contacto</a></li>
+            </ul>
+        </section>
+        <section class="contacto">
+            <h1 class="footer-titulo-h1">Contacto</h1>
+            <div class="footer-contacto-icon-desc">
+                <img class="footer-icon" src="../imagenes/email.png" alt="Correo">
+                <p class="footer-desc">contacto@gruasrav.cl</p>
+            </div>
+            <div class="footer-contacto-icon-desc">
+                <img class="footer-icon" src="../imagenes/phone.png" alt="Teléfono">
+                <p class="footer-desc">(2) 2291 6151</p>
+            </div>
+            <div class="footer-contacto-icon-desc">
+                <img class="footer-icon" src="../imagenes/location.png" alt="Ubicación">
+                <p class="footer-desc">Tomás de Campanella 5434, San Joaquín, Stgo., CL</p>
+            </div>  
+        </section>
+        <section class="rr-ss">
+            <h1 class="footer-titulo-h1">Redes Sociales</h1>
+            <div class="footer-contacto-icon-desc">
+                <img src="../imagenes/facebook.png" class="footer-icon" alt="Facebook">
+                <p class="footer-desc"><a class="footer-link" href="https://www.facebook.com/gruasravchile">Facebook</a></p>
+            </div> 
+            <div class="footer-contacto-icon-desc">
+                <img src="../imagenes/instagram.png" class="footer-icon" alt="Instagram">
+                <p class="footer-desc"><a class="footer-link" href="https://www.instagram.com/gruasrav/">Instagram</a></p>
+            </div> 
+        </section>
+    </footer>
+    <!-- Fin Footer -->
 </body>
 </html>
