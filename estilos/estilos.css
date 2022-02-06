@@ -1,0 +1,867 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100vh;
+}
+
+/*Inicio Estilos Encabezado*/
+.encabezado-logo {
+  width: 60px;
+  height: 50px;
+  margin-right: 50px;
+}
+
+.encabezado-logo-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.nav-link-rav {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #005c99;
+  text-decoration: none;
+  -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+/*Fin Estilos Encabezado*/
+/*Inicio Layout Sección 'Nuestros Servicios' con Grids*/
+.seccion-ns-servicios {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: (auto)[6];
+      grid-template-rows: repeat(6, auto);
+  grid-column-gap: 0%;
+  grid-row-gap: 0%;
+      grid-template-areas: "info-asistencias" "foto-asistencias" "info-traslados" "foto-traslados" "info-rescates" "foto-rescates";
+}
+
+.foto-asistencias {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: foto-asistencias;
+  background-color: red;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.foto-traslados {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: foto-traslados;
+  background-color: blue;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.foto-rescates {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: foto-rescates;
+  background-color: orange;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.info-asistencias {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: info-asistencias;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.info-traslados {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: info-traslados;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.info-rescates {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: info-rescates;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+/*Fin Layout Sección 'Nuestros Servicios' con Grids*/
+/*Inicio Media Query para Seccion 'Nuestros Servicios*/
+@media (min-width: 768px) {
+  .seccion-ns-servicios {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (50%)[2];
+        grid-template-columns: repeat(2, 50%);
+    -ms-grid-rows: (33.3%)[3];
+        grid-template-rows: repeat(3, 33.3%);
+    grid-column-gap: 0%;
+    grid-row-gap: 0%;
+        grid-template-areas: "foto-asistencias   info-asistencias" "info-traslados     foto-traslados" "foto-rescates      info-rescates";
+  }
+}
+
+/*Fin Media Query para Seccion 'Nuestros Servicios*/
+/*Inicio Layout Seccion 'Footer' con Grids*/
+.footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: (auto)[4];
+      grid-template-rows: repeat(4, auto);
+  grid-column-gap: 0%;
+  grid-row-gap: 0%;
+      grid-template-areas: "logo" "mapa-sitio" "contacto" "rr-ss";
+}
+
+.logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo;
+  background-color: #005c99;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mapa-sitio {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: mapa-sitio;
+  background-color: #005c99;
+}
+
+.contacto {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: contacto;
+  background-color: #005c99;
+}
+
+.rr-ss {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: rr-ss;
+  background-color: #005c99;
+}
+
+/*Fin Layout Seccion 'Footer' con Grids*/
+/*Inicio Media Query para Footer*/
+@media (min-width: 768px) {
+  .footer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[4];
+        grid-template-columns: repeat(4, auto);
+    -ms-grid-rows: 100%;
+        grid-template-rows: 100%;
+    grid-column-gap: 0%;
+    grid-row-gap: 0%;
+        grid-template-areas: "logo   mapa-sitio  contacto    rr-ss";
+  }
+}
+
+/*Fin Media Query para Footer*/
+/*Inicio Estilos de Footer*/
+.footer-logo-desc {
+  margin-top: 20px;
+  font-family: Rubik;
+  font-weight: 400;
+  font-size: 1rem;
+  font-style: italic;
+  color: white;
+}
+
+.footer-titulo-h1 {
+  text-align: left;
+  font-family: 'Open Sans';
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: white;
+  margin: 0%;
+}
+
+.footer-lista {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-align: right;
+  font-family: Rubik;
+  font-size: 1rem;
+  line-height: 15px;
+  list-style: none;
+  padding: 0%;
+  color: white;
+}
+
+.footer-lista li {
+  text-align: center;
+  font-family: Rubik;
+  font-size: 1rem;
+  line-height: 15px;
+  list-style: none;
+  color: white;
+}
+
+.footer-contacto-icon-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.footer-icon {
+  width: 25px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-left: 0px;
+}
+
+.footer-desc {
+  padding: 10px;
+  text-align: left;
+  margin-right: 10px;
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 1rem;
+  color: white;
+}
+
+.footer-link {
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  line-height: 30px;
+}
+
+.footer-link:hover {
+  background-color: #e6eff5;
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 1rem;
+  color: #00375c;
+  text-align: center;
+  text-decoration: none;
+  line-height: 30px;
+}
+
+.footer-link:visited {
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  line-height: 30px;
+}
+
+/*Fin Estilos de Footer*/
+/*Inicio Otros Estilos Generales*/
+.eg-h1 {
+  font-family: 'Open Sans';
+  font-weight: 800;
+  font-size: 1.875rem;
+  color: #00375c;
+  text-align: center;
+  padding: 10px;
+  margin: 0%;
+}
+
+.button {
+  background-color: #005c99;
+  border-radius: 10px;
+  border-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  display: inline-block;
+  font-family: 'Rubik';
+  font-size: 0.9rem;
+  font-weight: 500;
+  height: 40px;
+  letter-spacing: normal;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  position: relative;
+  text-align: center;
+}
+
+.info-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  padding: 0px;
+  margin: 0%;
+}
+
+.info-flex h2 {
+  text-align: center;
+  font-family: 'Open Sans';
+  font-weight: 800;
+  font-size: 1.375rem;
+  color: #00375c;
+  margin: 0%;
+}
+
+.info-flex h3 {
+  text-align: center;
+  font-family: 'Open Sans';
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #00375c;
+  margin: 0%;
+}
+
+.info-flex p {
+  text-align: center;
+  line-height: 20px;
+  font-family: Rubik;
+  font-size: 0.9rem;
+  color: #00375c;
+  padding: 5px;
+  width: 75%;
+  margin: 0%;
+  padding: 10px;
+}
+
+.info-flex ul {
+  text-align: justify;
+  font-family: Rubik;
+  font-size: 0.9rem;
+  color: #00375c;
+  padding: 15px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0%;
+}
+
+/*Fin Otros Estilos Generales*/
+/*Inicio Layout Index con Grids*/
+.cuerpo {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: auto 5% auto auto auto auto auto;
+      grid-template-rows: auto 5% auto auto auto auto auto;
+      grid-template-areas: "header" "bloque-azul" "banner" "seccion-ns" "seccion-pe" "seccion-de" "footer";
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+}
+
+.bloque-azul {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: bloque-azul;
+  background-color: #005c99;
+}
+
+.banner {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: banner;
+  position: relative;
+}
+
+.seccion-ns {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: seccion-ns;
+}
+
+.seccion-pe {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: seccion-pe;
+}
+
+.seccion-de {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: seccion-de;
+}
+
+.footer {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: footer;
+}
+
+/*Fin Layout Index con Grids*/
+/*Inicio Estilos Banner*/
+.banner-contenedor-cta {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  font-family: 'Open Sans';
+  font-weight: 800;
+  font-size: 1.875rem;
+  text-align: center;
+  padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.banner-contenedor-cta p {
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: white;
+  text-shadow: 2px 2px #00000096;
+  text-align: center;
+  margin-bottom: 10px;
+  padding-top: 20px;
+}
+
+/*Fin Estilos Banner*/
+/*Inicio Animaciones Banner*/
+/*Animaciones*/
+.texto-animado-fade-h2 {
+  font-family: 'Open Sans';
+  font-weight: 200;
+  text-shadow: 2px 2px #00000096;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-name: fade;
+          animation-name: fade;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.texto-animado-fade {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-name: fade;
+          animation-name: fade;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.texto-animado-zoom {
+  font-family: 'Open Sans';
+  font-weight: 800;
+  text-shadow: 2px 2px #00000096;
+  -webkit-animation-name: zoom;
+          animation-name: zoom;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes zoom {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+
+@keyframes zoom {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+
+/*Fin Animaciones Banner*/
+/*Inicio Media Queries para Banner*/
+@media (max-width: 576px) {
+  .banner-contenedor-cta {
+    height: 75%;
+  }
+  .banner-contenedor-cta p {
+    font-size: 0.6rem;
+  }
+  .texto-animado-fade-h2 {
+    font-family: 'Open Sans';
+    font-weight: 800;
+    font-size: 0.9rem;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-name: fade;
+            animation-name: fade;
+  }
+  .texto-animado-zoom {
+    font-family: 'Open Sans';
+    font-weight: 800;
+    font-size: 0.9rem;
+    -webkit-animation-name: zoom;
+            animation-name: zoom;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .banner-contenedor-cta {
+    height: 75%;
+  }
+  .banner-contenedor-cta p {
+    font-size: 0.9rem;
+  }
+  .texto-animado-fade-h2 {
+    font-family: 'Open Sans';
+    font-weight: 800;
+    font-size: 1.3rem;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-name: fade;
+            animation-name: fade;
+  }
+  .texto-animado-zoom {
+    font-family: 'Open Sans';
+    font-weight: 800;
+    font-size: 1.3rem;
+    -webkit-animation-name: zoom;
+            animation-name: zoom;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .banner-contenedor-cta {
+    height: 75%;
+  }
+  .banner-contenedor-cta p {
+    font-size: 1.3rem;
+  }
+  .texto-animado-fade-h2 {
+    font-family: 'Open Sans';
+    font-weight: 800;
+    font-size: 1.6rem;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-name: fade;
+            animation-name: fade;
+  }
+  .texto-animado-zoom {
+    font-family: 'Open Sans';
+    font-weight: 800;
+    font-size: 1.6rem;
+    -webkit-animation-name: zoom;
+            animation-name: zoom;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+}
+
+@media (min-width: 993px) {
+  .banner-contenedor-cta {
+    height: 75%;
+  }
+  .banner-contenedor-cta p {
+    font-size: 1.6rem;
+  }
+  .texto-animado-fade-h2 {
+    font-family: 'Open Sans';
+    font-weight: 800;
+    font-size: 1.875rem;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-name: fade;
+            animation-name: fade;
+  }
+  .texto-animado-zoom {
+    font-family: 'Open Sans';
+    font-weight: 800;
+    font-size: 1.875rem;
+    -webkit-animation-name: zoom;
+            animation-name: zoom;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+}
+
+/*Fin Media Queries para Banner*/
+/*Inicio Layout Seccion 'Donde Estamos' con Grids*/
+.seccion-de-ubicaciones {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: (auto)[3];
+      grid-template-rows: repeat(3, auto);
+  grid-column-gap: 0%;
+  grid-row-gap: 0%;
+      grid-template-areas: "foto-santiago" "foto-talca" "foto-temuco";
+}
+
+.foto-santiago {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: foto-santiago;
+  position: relative;
+}
+
+.foto-talca {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: foto-talca;
+  position: relative;
+}
+
+.foto-temuco {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: foto-temuco;
+  position: relative;
+}
+
+/*Fin Layout Seccion 'Donde Estamos' con Grids*/
+.foto-ubicacion {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/*Inicio Media Query para Seccion 'Donde Estamos*/
+@media (min-width: 768px) {
+  .seccion-de-ubicaciones {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
+    -ms-grid-rows: 100%;
+        grid-template-rows: 100%;
+    grid-column-gap: 0%;
+    grid-row-gap: 0%;
+        grid-template-areas: "foto-santiago  foto-talca  foto-temuco";
+  }
+}
+
+/*Fin Media Query para Seccion 'Donde Estamos*/
+/*Inicio Estilos de Seccion 'Donde Estamos'*/
+.ubicacion-cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  font-family: 'Open Sans';
+  font-weight: 800;
+  font-size: 1.875rem;
+  text-align: center;
+  margin: 0%;
+}
+
+/*Fin Estilos de Seccion 'Donde Estamos'*/
+/*Inicio Layout Pagina 'Servicios' con Grids*/
+.cuerpo-servicios {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: auto 5% auto auto;
+      grid-template-rows: auto 5% auto auto;
+      grid-template-areas: "s-header" "s-bloque-azul" "s-seccion-ns" "footer";
+}
+
+.s-header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: s-header;
+  background-color: aqua;
+}
+
+.s-bloque-azul {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: s-bloque-azul;
+  background-color: #005c99;
+}
+
+.s-seccion-ns {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: s-seccion-ns;
+}
+
+.footer {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: footer;
+}
+
+/*Fin Layout Pagina 'Servicios' con Grids*/
+/*# sourceMappingURL=estilos.css.map */

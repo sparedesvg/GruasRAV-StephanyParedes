@@ -1,0 +1,31 @@
+/*Inicio Layout Pagina 'Servicios' con Grids*/
+.cuerpo-servicios{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 5% auto auto;
+    grid-template-areas: 
+    "s-header"
+    "s-bloque-azul"
+    "s-seccion-ns"
+    "footer"
+    ;
+}
+
+.s-header{
+    grid-area: s-header; 
+    background-color: aqua;
+}
+
+.s-bloque-azul{
+    grid-area: s-bloque-azul;
+    background-color: $azul-rav;
+}
+
+.s-seccion-ns{
+    grid-area: s-seccion-ns;
+}
+
+.footer{
+    grid-area: footer;
+}
+/*Fin Layout Pagina 'Servicios' con Grids*/

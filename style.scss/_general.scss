@@ -1,0 +1,351 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100vh;
+}
+
+/*Inicio Estilos Encabezado*/
+.encabezado-logo{
+    width: 60px;
+    height: 50px;
+    margin-right: 50px;
+}
+
+.encabezado-logo-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nav-link-rav{
+    display: block;
+    padding: 0.5rem 1rem;
+    color: $azul-rav;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+/*Fin Estilos Encabezado*/
+
+/*Inicio Layout Sección 'Nuestros Servicios' con Grids*/
+.seccion-ns-servicios{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6,auto);
+    grid-column-gap: 0%;
+    grid-row-gap: 0%;
+    grid-template-areas: 
+    "info-asistencias"
+    "foto-asistencias"
+    "info-traslados"
+    "foto-traslados"
+    "info-rescates"
+    "foto-rescates"
+    ;
+}
+
+.foto-asistencias{
+    grid-area: foto-asistencias;
+    background-color: red;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.foto-traslados{
+    grid-area: foto-traslados;
+    background-color: blue;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.foto-rescates{
+    grid-area: foto-rescates;
+    background-color: orange;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-asistencias{
+    grid-area: info-asistencias;
+    display: flex;
+    flex-flow: column wrap; 
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.info-traslados{
+    grid-area: info-traslados;
+    display: flex;
+    flex-flow: column wrap; 
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.info-rescates{
+    grid-area: info-rescates;
+    display: flex;
+    flex-flow: column wrap; 
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+/*Fin Layout Sección 'Nuestros Servicios' con Grids*/
+
+/*Inicio Media Query para Seccion 'Nuestros Servicios*/
+@media(min-width:768px){
+    .seccion-ns-servicios{
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        grid-template-rows: repeat(3,33.3%);
+        grid-column-gap: 0%;
+        grid-row-gap: 0%;
+        grid-template-areas: 
+        "foto-asistencias   info-asistencias"
+        "info-traslados     foto-traslados"
+        "foto-rescates      info-rescates"
+        ;
+    }
+}
+/*Fin Media Query para Seccion 'Nuestros Servicios*/
+
+/*Inicio Layout Seccion 'Footer' con Grids*/
+.footer{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4,auto);
+    grid-column-gap: 0%;
+    grid-row-gap: 0%;
+    grid-template-areas: 
+    "logo"
+    "mapa-sitio"
+    "contacto"
+    "rr-ss"
+    ;
+}
+
+.logo{
+    grid-area: logo;
+    background-color: $azul-rav;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapa-sitio{
+    grid-area: mapa-sitio;
+    background-color: $azul-rav;
+}
+
+.contacto{
+    grid-area: contacto;
+    background-color: $azul-rav;
+}
+
+.rr-ss{
+    grid-area: rr-ss;
+    background-color: $azul-rav;
+
+}
+/*Fin Layout Seccion 'Footer' con Grids*/
+
+/*Inicio Media Query para Footer*/
+@media(min-width:768px){
+    .footer{
+        display: grid;
+        grid-template-columns: repeat(4,auto);
+        grid-template-rows: 100%;
+        grid-column-gap: 0%;
+        grid-row-gap: 0%;
+        grid-template-areas: 
+        "logo   mapa-sitio  contacto    rr-ss"
+        ;
+    }
+}
+/*Fin Media Query para Footer*/
+
+/*Inicio Estilos de Footer*/
+.footer-logo-desc {
+    margin-top: 20px;
+    font-family: Rubik;
+    font-weight: 400;
+    font-size: 1rem;
+    font-style: italic;
+    color: white;
+}
+
+.footer-titulo-h1 {
+    text-align: left;
+    font-family: 'Open Sans';
+    font-weight: 800;
+    font-size: $fuente-mediana;
+    color: white;
+    margin: 0%;
+}
+
+.footer-lista {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    text-align: right;
+    font-family: Rubik;
+    font-size: 1rem;
+    line-height: 15px;
+    list-style: none;
+    padding: 0%;
+    color: white;
+}
+
+.footer-lista li{
+    text-align: center;
+    font-family: Rubik;
+    font-size: 1rem;
+    line-height: 15px;
+    list-style: none;
+    color: white;
+}
+
+.footer-contacto-icon-desc {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.footer-icon {
+    width: 25px;
+    object-fit: contain;
+    margin-left: 0px;
+}
+
+.footer-desc {
+    padding: 10px;
+    text-align: left;
+    margin-right: 10px;
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 1rem;
+    color: white;
+}
+
+.footer-link {
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    line-height: 30px;
+}
+
+.footer-link:hover {
+    background-color: #e6eff5;
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 1rem;
+    color: #00375c;
+    text-align: center;
+    text-decoration: none;
+    line-height: 30px;   
+}
+
+.footer-link:visited {
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    line-height: 30px;
+}
+/*Fin Estilos de Footer*/
+
+/*Inicio Otros Estilos Generales*/
+.eg-h1{
+    font-family: 'Open Sans';
+    font-weight: 800;
+    font-size: $fuente-grande;
+    color: #00375c;
+    text-align: center;
+    padding: 10px;
+    margin: 0%;
+}
+
+.button{
+    background-color: $azul-rav;
+    border-radius: 10px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #fff;
+    display: inline-block;
+    font-family: 'Rubik';
+    font-size: $fuente-semi-mediana;
+    font-weight: 500;
+    height: 40px;
+    letter-spacing: normal;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.info-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    padding: 0px;
+    margin: 0%;
+}
+
+.info-flex h2{
+    text-align: center;
+    font-family: 'Open Sans';
+    font-weight: 800;
+    font-size: 1.375rem;
+    color: #00375c;
+    margin: 0%;
+}
+
+.info-flex h3{
+    text-align: center;
+    font-family: 'Open Sans';
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #00375c;
+    margin: 0%;
+}
+
+.info-flex p{
+    text-align: center;
+    line-height: 20px;
+    font-family: Rubik;
+    font-size: $fuente-semi-mediana;
+    color: #00375c;
+    padding: 5px;
+    width: 75%;
+    margin: 0%;
+    padding: 10px;
+}
+.info-flex ul{
+    text-align: justify;
+    font-family: Rubik;
+    font-size: $fuente-semi-mediana;
+    color: #00375c;
+    padding: 15px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0%;
+}
+/*Fin Otros Estilos Generales*/

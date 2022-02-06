@@ -1,0 +1,305 @@
+@import "variables";
+/*Inicio Layout Index con Grids*/
+.cuerpo{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 5% auto auto auto auto auto;
+    grid-template-areas: 
+    "header"
+    "bloque-azul"
+    "banner"
+    "seccion-ns"
+    "seccion-pe"
+    "seccion-de"
+    "footer"
+    ;
+}
+
+.header{
+    grid-area: header; 
+}
+
+.bloque-azul{
+    grid-area: bloque-azul;
+    background-color: $azul-rav;
+}
+
+.banner{
+    grid-area: banner;
+    position: relative;
+}
+
+.seccion-ns{
+    grid-area: seccion-ns;
+}
+
+.seccion-pe{
+    grid-area: seccion-pe;
+}
+
+.seccion-de{
+    grid-area: seccion-de;
+}
+
+.footer{
+    grid-area: footer;
+}
+/*Fin Layout Index con Grids*/
+
+/*Inicio Estilos Banner*/
+.banner-contenedor-cta {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Open Sans';
+    font-weight: 800;
+    font-size: $fuente-grande;
+    text-align: center;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.banner-contenedor-cta p{
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: $fuente-mediana;
+    color: white;
+    text-shadow: 2px 2px #00000096;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-top: 20px;
+}
+/*Fin Estilos Banner*/
+
+/*Inicio Animaciones Banner*/
+/*Animaciones*/
+.texto-animado-fade-h2{
+    font-family: 'Open Sans';
+    font-weight: 200;
+    text-shadow: 2px 2px #00000096;
+    animation-duration: 2s;
+    animation-name: fade;
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.texto-animado-fade{
+    animation-duration: 2s;
+    animation-name: fade;
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.texto-animado-zoom{
+    font-family: 'Open Sans';
+    font-weight: 800;
+    text-shadow: 2px 2px #00000096;
+    animation-name: zoom;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoom{
+    0% {opacity:0;}
+    100% {opacity:1;}
+
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(2);
+    }
+}
+/*Fin Animaciones Banner*/
+
+/*Inicio Media Queries para Banner*/
+@media(max-width:576px){
+    .banner-contenedor-cta{
+        height: 75%;
+    }
+    .banner-contenedor-cta p{
+        font-size: 0.6rem;
+    }
+
+    .texto-animado-fade-h2{
+        font-family: 'Open Sans';
+        font-weight: 800;
+        font-size: $fuente-semi-mediana;
+        animation-duration: 2s;
+        animation-name: fade;
+    }
+
+    .texto-animado-zoom{
+        font-family: 'Open Sans';
+        font-weight: 800;
+        font-size: $fuente-semi-mediana;
+        animation-name: zoom;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@media(min-width:577px) and (max-width:768px){
+    .banner-contenedor-cta{
+        height: 75%;
+    }
+    .banner-contenedor-cta p{
+        font-size: $fuente-semi-mediana;
+    }
+
+    .texto-animado-fade-h2{
+        font-family: 'Open Sans';
+        font-weight: 800;
+        font-size: $fuente-mediana;
+        animation-duration: 2s;
+        animation-name: fade;
+    }
+
+    .texto-animado-zoom{
+        font-family: 'Open Sans';
+        font-weight: 800;
+        font-size: $fuente-mediana;
+        animation-name: zoom;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+}
+@media(min-width:769px) and (max-width:992px){
+    .banner-contenedor-cta{
+        height: 75%;
+    }
+    .banner-contenedor-cta p{
+        font-size: $fuente-mediana;
+    }
+
+    .texto-animado-fade-h2{
+        font-family: 'Open Sans';
+        font-weight: 800;
+        font-size: $fuente-semi-grande;
+        animation-duration: 2s;
+        animation-name: fade;
+    }
+
+    .texto-animado-zoom{
+        font-family: 'Open Sans';
+        font-weight: 800;
+        font-size: $fuente-semi-grande;
+        animation-name: zoom;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@media(min-width:993px){
+    .banner-contenedor-cta{
+        height: 75%;
+    }
+    .banner-contenedor-cta p{
+        font-size: $fuente-semi-grande;
+    }
+    .texto-animado-fade-h2{
+        font-family: 'Open Sans';
+        font-weight: 800;
+        font-size: $fuente-grande;
+        animation-duration: 2s;
+        animation-name: fade;
+    }
+    .texto-animado-zoom{
+        font-family: 'Open Sans';
+        font-weight: 800;
+        font-size: $fuente-grande;
+        animation-name: zoom;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+}
+/*Fin Media Queries para Banner*/
+
+/*Inicio Layout Seccion 'Donde Estamos' con Grids*/
+.seccion-de-ubicaciones{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3,auto);
+    grid-column-gap: 0%;
+    grid-row-gap: 0%;
+    grid-template-areas: 
+    "foto-santiago"
+    "foto-talca"
+    "foto-temuco"
+    ;
+}
+
+.foto-santiago{
+    grid-area: foto-santiago;
+    position: relative;
+}
+
+.foto-talca{
+    grid-area: foto-talca;
+    position: relative;
+}
+
+.foto-temuco{
+    grid-area: foto-temuco;
+    position: relative;
+
+}
+/*Fin Layout Seccion 'Donde Estamos' con Grids*/
+
+.foto-ubicacion{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Inicio Media Query para Seccion 'Donde Estamos*/
+@media(min-width:768px){
+    .seccion-de-ubicaciones{
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+        grid-template-rows: 100%;
+        grid-column-gap: 0%;
+        grid-row-gap: 0%;
+        grid-template-areas: 
+        "foto-santiago  foto-talca  foto-temuco"
+        ;
+    }
+}
+/*Fin Media Query para Seccion 'Donde Estamos*/
+
+/*Inicio Estilos de Seccion 'Donde Estamos'*/
+.ubicacion-cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Open Sans';
+    font-weight: 800;
+    font-size: $fuente-grande;
+    text-align: center;
+    margin: 0%;
+}
+/*Fin Estilos de Seccion 'Donde Estamos'*/
