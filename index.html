@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Inicio SEO -->
+    <meta name="description" content="Somos Grúas RAV y entregamos servicios óptimos de rescates, remolques y asistencias viales para vehiculos pesados en Chile, las 24 horas del día y los 365 días del año. Cotice gratuitamente el servicio que necesita.">
+    <meta name="keyword" content="gruas, chile, santiago, talca, temuco, remolque, traslado, rescate, asistencia, vial, ruta, vehiculos, pesados, camiones, buses, maquinaria, cotizacion, servicio">
+    <!-- Fin SEO -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./estilos/estilos.css">
-    <title>Document</title>
+    <title>Grúas RAV - Rescates y Asistencias Viales</title>
 </head>
 <body class="cuerpo">
     <!-- Inicio Header -->
@@ -74,7 +78,7 @@
             <h2 class="texto-animado-fade-h2">Somos</h2>
             <h1 class="texto-animado-zoom">Grúas RAV</h1>
             <p class="texto-animado-fade">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab laudantium accusantium eos qui, molestiae similique impedit ipsam. A sequi illo, ad quae officiis blanditiis vitae assumenda, delectus repellat eius nostrum?</p>
-            <button onclick="document.location='./secciones/cotizar.html'" class="button">Cotizar Gratis</button>
+            <button onclick="document.location='./secciones/cotizar.html'" class="yellow-button">Cotizar Gratis</button>
         </div>
     </main>
     <!-- Fin Banner -->
@@ -85,7 +89,10 @@
         <section class="seccion-ns-servicios">
             <!-- Inicio Sección Asistencias -->
             <div class="foto-asistencias">
-                <img src="./imagenes/asistencias.jpg" class="foto-asistencias" alt="Asistencias">
+                <div class="contenedor-overlay">
+                    <img src="./imagenes/asistencias.jpg" class="foto" alt="Asistencias">
+                    <div class="overlay-1"></div>
+                </div>
             </div>
             <div class="info-asistencias">
                 <div class="info-flex">
@@ -98,7 +105,7 @@
                         <li>Elemento 3</li>
                     </ul>
                     <div>
-                        <button onclick="document.location='./secciones/servicios.html#asistencias'" class="button">Conocer más</button>
+                        <button onclick="document.location='./secciones/contacto.html#contacto'" class="yellow-button">Cotizar Servicio</button>
                     </div>
                 </div>
             </div>
@@ -115,17 +122,23 @@
                         <li>Elemento 3</li>
                     </ul>
                     <div>
-                        <button onclick="document.location='./secciones/servicios.html#traslados'" class="button">Conocer más</button>
+                        <button onclick="document.location='./secciones/contacto.html#contacto'" class="yellow-button">Cotizar Servicio</button>
                     </div>
                 </div>
             </div>
             <div class="foto-traslados">
-                <img src="./imagenes/traslados.jpg" class="foto-traslados" alt="Traslados">
+                <div class="contenedor-overlay">
+                    <img src="./imagenes/traslados.jpg" class="foto" alt="Traslados">
+                    <div class="overlay-1"></div>
+                </div>
             </div>
             <!-- Fin Sección Traslados -->
             <!-- Inicio Sección Rescates -->
             <div class="foto-rescates">
-                <img src="./imagenes/rescates.jpg" class="foto-rescates" alt="Rescates">
+                <div class="contenedor-overlay">
+                    <img src="./imagenes/rescates.jpg" class="foto" alt="Rescates">
+                    <div class="overlay-1"></div>
+                </div>
             </div>
             <div class="info-rescates">
                 <div class="info-flex">
@@ -138,7 +151,7 @@
                         <li>Elemento 3</li>
                     </ul>
                     <div>
-                        <button onclick="document.location='./secciones/servicios.html#rescates'" class="button">Conocer más</button>
+                        <button onclick="document.location='./secciones/contacto.html#contacto'" class="yellow-button">Cotizar Servicio</button>
                     </div>
                 </div>
             </div>
@@ -175,24 +188,33 @@
         <!-- Inicio Ubicaciones -->
         <section class="seccion-de-ubicaciones">
             <div class="foto-santiago">
-                <img src="./imagenes/santiago.jpg" class="foto-ubicacion" alt="Santiago">
-                <div class="ubicacion-cta">
-                    <p>Santiago</p>
-                    <button onclick="document.location='./secciones/contacto.html#santiago'" class="button">Conocer más</button>
+                <div class="contenedor-overlay">
+                    <img src="./imagenes/santiago.jpg" class="foto" alt="Santiago">
+                    <div class="overlay-2"></div>
+                    <div class="ubicacion-cta">
+                        <p>Santiago</p>
+                        <button onclick="document.location='./secciones/contacto.html#santiago'" class="button">Conocer más</button>
+                    </div>
                 </div>
             </div>
             <div class="foto-talca">
-                <img src="./imagenes/talca.jpg" class="foto-ubicacion" alt="Talca">
-                <div class="ubicacion-cta">
-                    <p>Talca</p>
-                    <button onclick="document.location='./secciones/contacto.html#talca'" class="button">Conocer más</button>
+                <div class="contenedor-overlay">
+                    <img src="./imagenes/talca.jpg" class="foto" alt="Talca">
+                    <div class="overlay-2"></div>
+                    <div class="ubicacion-cta">
+                        <p>Talca</p>
+                        <button onclick="document.location='./secciones/contacto.html#talca'" class="button">Conocer más</button>
+                    </div>
                 </div>
             </div>
             <div class="foto-temuco">
-                <img src="./imagenes/temuco.jpg" class="foto-ubicacion" alt="Temuco">
-                <div class="ubicacion-cta">
-                    <p>Temuco</p>
-                    <button onclick="document.location='./secciones/contacto.html#temuco'" class="button">Conocer más</button>
+                <div class="contenedor-overlay">
+                    <img src="./imagenes/temuco.jpg" class="foto" alt="Temuco">
+                    <div class="overlay-2"></div>
+                    <div class="ubicacion-cta">
+                        <p>Temuco</p>
+                        <button onclick="document.location='./secciones/contacto.html#temuco'" class="button">Conocer más</button>
+                    </div>
                 </div>
             </div>
         </section>
