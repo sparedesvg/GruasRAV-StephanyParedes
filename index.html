@@ -4,244 +4,199 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Inicio SEO -->
+    <meta name="description" content="Somos Grúas RAV y entregamos servicios óptimos de rescates, remolques y asistencias viales para vehiculos pesados en Chile, las 24 horas del día y los 365 días del año. Cotice gratuitamente el servicio que necesita.">
+    <meta name="keyword" content="gruas, chile, santiago, talca, temuco, remolque, traslado, rescate, asistencia, vial, ruta, vehiculos, pesados, camiones, buses, maquinaria, cotizacion, servicio">
+    <!-- Fin SEO -->
     <link rel="stylesheet" href="./estilos/estilos.css">
-    <title>Document</title>
+    <title>Grúas RAV</title>
 </head>
-<body class="cuerpo">
-    <!-- Inicio Header -->
-    <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <!-- Inicio Logo -->
-              <section class="encabezado-logo">
-                  <a href="index.html"><img class="encabezado-logo-img" src="./imagenes/logo2.png" alt="Logo"></a>
-              </section>
-              <!-- Fin Logo -->
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link-rav" aria-current="page" href="#">Inicio</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Nosotros
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="./secciones/nosotros.html#mision">Misión</a></li>
-                      <li><a class="dropdown-item" href="./secciones/nosotros.html#vision">Visión</a></li>
-                      <li><a class="dropdown-item" href="./secciones/nosotros.html#historia">Historia</a></li>
-                      <li><a class="dropdown-item" href="./secciones/nosotros.html#equipo">Equipo</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Servicios
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="./secciones/servicios.html#asistencias">Asistencias</a></li>
-                      <li><a class="dropdown-item" href="./secciones/servicios.html#traslados">Traslados</a></li>
-                      <li><a class="dropdown-item" href="./secciones/servicios.html#rescates">Rescates</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./secciones/cotizar.html">Cotizar</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./secciones/contacto.html">Contacto</a>
-                  </li>
+<body>
+    <div class="grilla-cuerpo-index">
+        <header class="encabezado-1">
+            <div class="encabezado-logo">
+                <a href="./index.html"><img src="./imagenes/logo.png" width="80px" height="70px" alt=""></a>
+            </div>
+            <nav>
+                <ul class="nav-lista">
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./secciones/servicios.html">Servicios</a></li>
+                    <li><a href="./secciones/ubicacion.html">Ubicacion</a></li>
+                    <li><a href="./secciones/trabajos.html">Trabajos</a></li>
+                    <li><a href="./secciones/nosotros.html">Nosotros</a></li>
                 </ul>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Escribe aquí..." aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Buscar</button>
-                </form>
-              </div>
+            </nav>
+            <div class="encabezado-flecha-abajo">
+                <img src="./imagenes/flecha-abajo.png" class="flecha-animada" height="50px" alt="Scroll">
             </div>
-          </nav>
-    </header>
-    <!-- Fin Header -->
-    <!-- Inicio Bloque Azul -->
-    <div class="bloque-azul"></div>
-    <!-- Fin Bloque Azul -->
-    <!-- Inicio Banner -->
-    <main class="banner">
-        <img src="./imagenes/flota.jpg" class="foto-ubicacion" alt="Flota">
-        <div class="banner-contenedor-cta">
-            <h2 class="texto-animado-fade-h2">Somos</h2>
-            <h1 class="texto-animado-zoom">Grúas RAV</h1>
-            <p class="texto-animado-fade">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab laudantium accusantium eos qui, molestiae similique impedit ipsam. A sequi illo, ad quae officiis blanditiis vitae assumenda, delectus repellat eius nostrum?</p>
-            <button onclick="document.location='./secciones/cotizar.html'" class="button">Cotizar Gratis</button>
+        </header>
+        <header class="encabezado-2">
+            <div class="enc-2-logo">
+                <a href="./index.html">
+                    <img src="./imagenes/logo.png" width="80px" height="auto" alt="">
+                </a>
+            </div>
+            <div class="enc-2-inicio"><a href="">Inicio</a></div>
+            <div class="enc-2-servicios"><a href="./secciones/servicios.html">Servicios</a></div>
+            <div class="enc-2-ubicacion"><a href="./secciones/ubicacion.html">Ubicación</a></div>
+            <div class="enc-2-trabajos"><a href="./secciones/trabajos.html">Trabajos</a></div>
+            <div class="enc-2-nosotros"><a href="./secciones/nosotros.html">Nosotros</a></div>
+            <div class="enc-2-iconos">
+                <a href="./secciones/ubicacion.html#contacto">
+                    <img src="./imagenes/chat-azul.png" class="encabezado-icono" alt="Contacto">
+                </a>
+                <a href="https://www.instagram.com/gruasrav/">
+                    <img src="./imagenes/instagram-azul.png" class="encabezado-icono" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/gruasravchile">
+                    <img src="./imagenes/facebook-azul.png" class="encabezado-icono" alt="Facebook">
+                </a>
+            </div>
+        </header>
+        <div class="banner-1">
+            <div class="banner-1-contenido">
+                <h1>Grúas RAV</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur, iste.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                <div class="button">button</div>
+            </div>
         </div>
-    </main>
-    <!-- Fin Banner -->
-    <!-- Inicio Sección 'Nuestros Servicios (NS)' -->
-    <section class="seccion-ns">
-        <h1 class="eg-h1">Nuestros Servicios</h1>
-        <!-- Inicio Grilla Servicios -->
-        <section class="seccion-ns-servicios">
-            <!-- Inicio Sección Asistencias -->
-            <div class="foto-asistencias">
-                <img src="./imagenes/asistencias.jpg" class="foto-asistencias" alt="Asistencias">
+        <div class="banner-2"></div>
+        <section class="servicios">
+            <h1 class="titulo">NUESTRO SERVICIOS</h1>
+            <div class="grilla-servicios">
+                <div class="desc-servicio-1">
+                    <div class="contenedor-desc-derecha">
+                        <h2>Asistencias</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dolor minus dolorum numquam ipsam iure?</p>
+                        <div class="button">button</div>
+                    </div>
+                </div>
+                <div class="foto-servicio-1">
+                    <div class="contenedor-foto-izquierda">
+                        <img src="./imagenes/asistencias.jpg" class="foto" alt="Asistencias"">
+                    </div>
+                </div>
+                <div class="desc-servicio-2">
+                    <div class="contenedor-desc-izquierda">
+                        <h2>Traslados</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dolor minus dolorum numquam ipsam iure?</p>
+                        <div class="button">button</div>  
+                    </div>
+                </div>
+                <div class="foto-servicio-2">
+                    <div class="contenedor-foto-derecha">
+                        <img src="./imagenes/traslados.jpg" class="foto" alt="Traslados"">
+                    </div>
+                </div>
+                <div class="desc-servicio-3">
+                    <div class="contenedor-desc-derecha">
+                        <h2>Rescates</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dolor minus dolorum numquam ipsam iure?</p>
+                        <div class="button">button</div>    
+                    </div>
+                </div>
+                <div class="foto-servicio-3">
+                    <div class="contenedor-foto-izquierda">
+                        <img src="./imagenes/rescates.jpg" class="foto" alt="Rescates"">
+                    </div>
+                </div>                
             </div>
-            <div class="info-asistencias">
-                <div class="info-flex">
-                    <h2>Asistencias</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus fugiat explicabo magni optio odio nostrum totam expedita minima quam obcaecati, accusamus unde dolorum, asperiores laborum culpa necessitatibus autem assumenda odit.</p>
-                    <h3>Lista Asistencias</h3>
-                    <ul>
-                        <li>Elemento 1</li>
-                        <li>Elemento 2</li>
-                        <li>Elemento 3</li>
-                    </ul>
-                    <div>
-                        <button onclick="document.location='./secciones/servicios.html#asistencias'" class="button">Conocer más</button>
+        </section>
+        <section class="valores">
+            <div class="grilla-valores">
+                <div class="title"><h1>¿Por qué escogernos?</h1></div>
+                <div class="pe-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas soluta tempore neque quisquam pariatur possimus necessitatibus aliquid sapiente illo magni.</div>
+                <div class="contenedor-valores">
+                    <div class="valor">
+                        <img src="./imagenes/hand-shake.png" class="valor-icon" alt="Flecha">
+                        <h2>Compromiso</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="valor">
+                        <img src="./imagenes/quality.png" class="valor-icon" alt="Flecha">
+                        <h2>Calidad</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="valor">
+                        <img src="./imagenes/customer-service.png" class="valor-icon" alt="Flecha">
+                        <h2>Atención</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
                     </div>
                 </div>
             </div>
-            <!-- Fin Sección Asistencias -->
-            <!-- Inicio Sección Traslados -->
-            <div class="info-traslados">
-                <div class="info-flex">
-                    <h2>Traslados</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus fugiat explicabo magni optio odio nostrum totam expedita minima quam obcaecati, accusamus unde dolorum, asperiores laborum culpa necessitatibus autem assumenda odit.</p>
-                    <h3>Lista Traslados</h3>
-                    <ul>
-                        <li>Elemento 1</li>
-                        <li>Elemento 2</li>
-                        <li>Elemento 3</li>
-                    </ul>
-                    <div>
-                        <button onclick="document.location='./secciones/servicios.html#traslados'" class="button">Conocer más</button>
+        </section>
+        <section class="ubicaciones">
+            <div class="title">
+                <h1>¿Dónde estamos?</h1>
+            </div>
+            <div class="bloque-5-0">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur nemo ullam odit praesentium dolorem repellendus hic deleniti repellat velit excepturi?</p>
+            </div>
+            <div class="grilla-ubicaciones">
+                <div class="ubicacion-1">
+                    <div class="contenedor-ubicacion-izquierda">
+                        <img src="./imagenes/santiago.jpg" class="foto-ubicacion" alt="Santiago">
+                        <h1>Santiago</h1>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <div class="button">Button</div>
+                    </div>
+                </div>
+                <div class="ubicacion-2">
+                    <div class="contenedor-ubicacion-centro">
+                        <img src="./imagenes/talca.jpg" class="foto-ubicacion" alt="Talca">
+                        <h1>Talca</h1>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <div class="button">Button</div>
+                    </div>
+                </div>
+                <div class="ubicacion-3">
+                    <div class="contenedor-ubicacion-derecha">
+                        <img src="./imagenes/temuco.jpg" class="foto-ubicacion" alt="Temuco">
+                        <h1>Temuco</h1>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <div class="button">Button</div>
                     </div>
                 </div>
             </div>
-            <div class="foto-traslados">
-                <img src="./imagenes/traslados.jpg" class="foto-traslados" alt="Traslados">
-            </div>
-            <!-- Fin Sección Traslados -->
-            <!-- Inicio Sección Rescates -->
-            <div class="foto-rescates">
-                <img src="./imagenes/rescates.jpg" class="foto-rescates" alt="Rescates">
-            </div>
-            <div class="info-rescates">
-                <div class="info-flex">
-                    <h2>Rescates</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus fugiat explicabo magni optio odio nostrum totam expedita minima quam obcaecati, accusamus unde dolorum, asperiores laborum culpa necessitatibus autem assumenda odit.</p>
-                    <h3>Lista Rescates</h3>
-                    <ul>
-                        <li>Elemento 1</li>
-                        <li>Elemento 2</li>
-                        <li>Elemento 3</li>
-                    </ul>
-                    <div>
-                        <button onclick="document.location='./secciones/servicios.html#rescates'" class="button">Conocer más</button>
+        </section>
+        <footer class="footer">
+            <div class="grilla-footer">
+                <div class="footer-varios">
+                    <div class="contenedor-footer-varios">
+                        <img src="./imagenes/logo.png" width="80px" height="70px" alt="Logo">
+                        <p>Su flota en buenas manos.</p>
+                        <div class="rr-ss">
+                            <img src="./imagenes/facebook-blanco.png" width="25px" alt="Facebook">
+                            <img src="./imagenes/instagram-blanco.png" width="25px" alt="Instagram">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-enlaces">
+                    <div class="contenedor-enlaces">
+                        <h1>Enlaces</h1>
+                        <ul>
+                            <li><a href="./index.html">Inicio</a></li>
+                            <li><a href="./secciones/servicios.html">Servicios</a></li>
+                            <li><a href="./secciones/ubicacion.html">Ubicación</a></li>
+                            <li><a href="./secciones/trabajos.html">Trabajos</a></li>
+                            <li><a href="./secciones/nosotros.html">Nosotros</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-contacto">
+                    <div class="contenedor-contacto">
+                        <h1>Contacto</h1>
+                        <ul>
+                            <li><img src="./imagenes/arroba.png" width="25px" alt="Correo"> contacto@gruasrav.cl</li>
+                            <li><img src="./imagenes/telefono.png" width="25px" alt="Teléfono"> (2) 2291 6151</li>
+                            <li><img src="./imagenes/ubicacion.png" width="25px" alt="Ubicación"> Tomás de Campanella 5434, San Joaquín, Stgo.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <!-- Fin Sección Rescates-->
-        </section>
-        <!-- Fin Grilla Servicios -->
-    </section>
-
-    <!-- Fin Sección 'Nuestros Servicios (NS)' -->
-    <!-- Inicio Sección 'Por Qué Escogernos' (PE) -->
-    <section class="seccion-pe">
-        <h1 class="eg-h1">¿Por qué escogernos?</h1>
-        <div class="info-flex">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, perspiciatis praesentium ipsum cum nihil doloremque odio officiis beatae velit quaerat labore. Dignissimos culpa quisquam quasi nulla quo ipsa delectus recusandae?</p>
-            <ul>
-                <li>Elemento 1</li>
-                <li>Elemento 2</li>
-                <li>Elemento 3</li>
-            </ul>
-            <div>
-                <button onclick="document.location='./secciones/nosotros.html'" class="button">Conocer más</button>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Fin Sección 'Por Qué Escogernos' (PE) -->
-    <!-- Inicio Sección 'Dónde Estamos' (DE) -->
-    <section class="seccion-de">
-        <h1 class="eg-h1">¿Dónde estamos?</h1>
-        <div class="info-flex">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nesciunt possimus minus? Quibusdam harum, dolore unde aspernatur itaque doloribus sapiente labore quisquam distinctio, voluptatibus temporibus minus et, accusantium ut totam?</p>
-        </div>
-        <!-- Inicio Ubicaciones -->
-        <section class="seccion-de-ubicaciones">
-            <div class="foto-santiago">
-                <img src="./imagenes/santiago.jpg" class="foto-ubicacion" alt="Santiago">
-                <div class="ubicacion-cta">
-                    <p>Santiago</p>
-                    <button onclick="document.location='./secciones/contacto.html#santiago'" class="button">Conocer más</button>
-                </div>
-            </div>
-            <div class="foto-talca">
-                <img src="./imagenes/talca.jpg" class="foto-ubicacion" alt="Talca">
-                <div class="ubicacion-cta">
-                    <p>Talca</p>
-                    <button onclick="document.location='./secciones/contacto.html#talca'" class="button">Conocer más</button>
-                </div>
-            </div>
-            <div class="foto-temuco">
-                <img src="./imagenes/temuco.jpg" class="foto-ubicacion" alt="Temuco">
-                <div class="ubicacion-cta">
-                    <p>Temuco</p>
-                    <button onclick="document.location='./secciones/contacto.html#temuco'" class="button">Conocer más</button>
-                </div>
-            </div>
-        </section>
-        <!-- Fin Ubicaciones -->
-    </section>
-    <!-- Fin Sección 'Dónde Estamos' (DE) -->
-    <!-- Inicio Footer -->
-    <footer class="footer">
-        <section class="logo">
-            <a href="index.html"><img src="./imagenes/logo2.png" alt="logo" width="70px" height="60px"></a>
-            <p class="footer-logo-desc">Su flota en buenas manos.</p>
-        </section>
-        <section class="mapa-sitio">
-            <h1 class="footer-titulo-h1">Mapa del Sitio</h1>
-            <ul class="footer-lista">
-                <li><a class="footer-link" href="index.html">Inicio</a></li>
-                <li><a class="footer-link" href="./secciones/nosotros.html">Nosotros</a></li>
-                <li><a class="footer-link" href="./secciones/servicios.html">Servicios</a></li>
-                <li><a class="footer-link" href="./secciones/cotizar.html">Cotizar</a></li>
-                <li><a class="footer-link" href="./secciones/contacto.html">Contacto</a></li>
-            </ul>
-        </section>
-        <section class="contacto">
-            <h1 class="footer-titulo-h1">Contacto</h1>
-            <div class="footer-contacto-icon-desc">
-                <img class="footer-icon" src="./imagenes/email.png" alt="Correo">
-                <p class="footer-desc">contacto@gruasrav.cl</p>
-            </div>
-            <div class="footer-contacto-icon-desc">
-                <img class="footer-icon" src="./imagenes/phone.png" alt="Teléfono">
-                <p class="footer-desc">(2) 2291 6151</p>
-            </div>
-            <div class="footer-contacto-icon-desc">
-                <img class="footer-icon" src="./imagenes/location.png" alt="Ubicación">
-                <p class="footer-desc">Tomás de Campanella 5434, San Joaquín, Stgo., CL</p>
-            </div>  
-        </section>
-        <section class="rr-ss">
-            <h1 class="footer-titulo-h1">Redes Sociales</h1>
-            <div class="footer-contacto-icon-desc">
-                <img src="./imagenes/facebook.png" class="footer-icon" alt="Facebook">
-                <p class="footer-desc"><a class="footer-link" href="https://www.facebook.com/gruasravchile">Facebook</a></p>
-            </div> 
-            <div class="footer-contacto-icon-desc">
-                <img src="./imagenes/instagram.png" class="footer-icon" alt="Instagram">
-                <p class="footer-desc"><a class="footer-link" href="https://www.instagram.com/gruasrav/">Instagram</a></p>
-            </div> 
-        </section>
-    </footer>
-    <!-- Fin Footer -->
+        </footer>
+    </div>
 </body>
 </html>

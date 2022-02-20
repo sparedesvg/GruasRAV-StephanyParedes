@@ -1,0 +1,482 @@
+/*Inicio Estructura Mobile First*/
+.grilla-cuerpo-trabajos{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100vh auto auto;
+    grid-template-areas:
+    "encabezado-1"
+    "grilla-trabajos"
+    "footer";
+}
+
+.encabezado-2{
+    grid-area: encabezado-2;
+    display: none; 
+}
+
+.grilla-trabajos{
+    grid-area: grilla-trabajos;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(7,auto);
+    grid-template-areas:
+    "trabajos-titulo"
+    "grilla-trabajo-1"
+    "galeria-1"
+    "grilla-trabajo-2"
+    "galeria-2"
+    "grilla-trabajo-3"
+    "galeria-3";
+    margin: 1em;
+
+    h1{
+        font-family: 'Padauk';
+        font-size: 1.5em;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    p{
+        padding: 1em 0;
+    }
+}
+
+.trabajos-titulo{
+    grid-area: trabajos-titulo;
+}
+
+.grilla-trabajo-1{
+    grid-area: grilla-trabajo-1;
+    margin: 1em 10%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    row-gap: 1em;
+    grid-template-areas:
+    "desc-izquierda"
+    "foto-derecha";
+}
+
+.desc-izquierda{
+    grid-area: desc-izquierda;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    p{
+        text-align: left;
+    }
+}
+
+.foto-derecha{
+    grid-area: foto-derecha;
+}
+
+.grilla-trabajo-2{
+    grid-area: grilla-trabajo-2;
+    margin: 1em 10%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    row-gap: 1em;
+    grid-template-areas:
+    "desc-derecha"
+    "foto-izquierda";
+}
+
+.desc-derecha{
+    grid-area: desc-derecha;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    p{
+        text-align: left;
+    }
+
+}
+
+.foto-izquierda{
+    grid-area: foto-izquierda;
+}
+
+.grilla-trabajo-3{
+    grid-area: grilla-trabajo-3;
+    margin: 1em 10%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    row-gap: 1em;
+    grid-template-areas:
+    "desc-izquierda"
+    "foto-derecha";
+}
+
+.galeria-1{
+    grid-area: galeria-1;
+    padding: 1em 10%;
+    background-color: #dde8ef;
+}
+
+.galeria-2{
+    grid-area: galeria-2;
+    padding: 1em 10%;
+    background-color: #dde8ef;
+}
+
+.galeria-3{
+    grid-area: galeria-3;
+    padding: 1em 10%;
+    background-color: #dde8ef;
+}
+
+.contenedor-galeria-flex{
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 1em;
+    justify-content: space-between;
+}
+
+.foto-galeria{
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.detalles{
+    display: inline-block;
+    text-transform: uppercase;
+    color: #437cae;
+}
+
+@media(min-width:768px) and (max-width:1023px){
+    .grilla-cuerpo-trabajos{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+        "encabezado-2"
+        "grilla-trabajos"
+        "footer";
+    }
+
+    .encabezado-2{
+        grid-area: encabezado-2;
+        display: grid;
+        grid-template-columns: repeat(7,14.27%);
+        grid-template-rows: 100%;
+        grid-template-areas:
+        "enc-2-logo enc-2-inicio enc-2-servicios enc-2-ubicacion enc-2-trabajos enc-2-nosotros enc-2-iconos";
+        padding: 1em 0;
+        font-family: 'Padauk';
+        font-size: 1rem;
+        text-align: center;
+        color: #003468;
+
+        a{
+            display: block;
+            margin: 0 0.5em;
+            border-style: solid;
+            border-width: 0.1em;
+            border-color: #003468;
+            padding: 0.5em 0;
+            height: 100%;
+            color: #003468;
+
+            &:hover{
+                background-color: #003468;
+                color: white;
+            }
+        }
+    }
+
+    .enc-2-logo{
+        grid-area: enc-2-logo;
+        align-self: center;
+
+        a{
+            display: block;
+            border-style: none;
+
+            &:hover{
+                background-color: white;
+            }
+        }
+    }
+
+    .enc-2-inicio{
+        grid-area: enc-2-inicio;
+        align-self: center;
+    }
+
+    .enc-2-servicios{
+        grid-area: enc-2-servicios;
+        align-self: center;
+    }
+
+    .enc-2-ubicacion{
+        grid-area: enc-2-ubicacion;
+        align-self: center;
+    }
+
+    .enc-2-trabajos{
+        grid-area: enc-2-trabajos;
+        align-self: center;
+    }
+
+    .enc-2-nosotros{
+        grid-area: enc-2-nosotros;
+        align-self: center;
+    }
+
+    .enc-2-iconos{
+        grid-area: enc-2-iconos;
+        display: block;
+        align-self: center;
+
+        a{
+            display: inline-block;
+            margin: 0;
+            border-style: none;
+
+            &:hover{
+                background-color: white;
+            }
+        }
+    }
+
+    .encabezado-icono{
+        width: 25px;
+    }
+}
+
+@media(min-width:1024px){
+    .grilla-cuerpo-trabajos{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+        "encabezado-2 encabezado-2"
+        "grilla-trabajos grilla-trabajos"
+        "footer footer"
+    }
+
+    .encabezado-1{
+        display: none;
+    }
+
+    .encabezado-2{
+        grid-area: encabezado-2;
+        display: grid;
+        grid-template-columns: repeat(7,14.27%);
+        grid-template-rows: 100%;
+        grid-template-areas:
+        "enc-2-logo enc-2-inicio enc-2-servicios enc-2-ubicacion enc-2-trabajos enc-2-nosotros enc-2-iconos";
+        padding: 1em 0;
+        text-align: center;
+    
+        a{
+            display: block;
+            margin: 0 0.5em;
+            border-style: solid;
+            border-width: 0.1em;
+            border-color: #003468;
+            padding: 0.5em 0;
+            height: 100%;
+            color: #003468;
+
+            &:hover{
+                background-color: #003468;
+                color: white;
+            }
+        }
+    }
+
+    .enc-2-logo{
+        grid-area: enc-2-logo;
+        align-self: center;
+
+        a{
+            display: block;
+            border-style: none;
+
+            &:hover{
+                background-color: white;
+            }
+        }
+    }
+
+    .enc-2-inicio{
+        grid-area: enc-2-inicio;
+        align-self: center;
+    }
+
+    .enc-2-servicios{
+        grid-area: enc-2-servicios;
+        align-self: center;
+    }
+
+    .enc-2-ubicacion{
+        grid-area: enc-2-ubicacion;
+        align-self: center;
+    }
+
+    .enc-2-trabajos{
+        grid-area: enc-2-trabajos;
+        align-self: center;
+    }
+
+    .enc-2-nosotros{
+        grid-area: enc-2-nosotros;
+        align-self: center;
+    }
+
+    .enc-2-iconos{
+        grid-area: enc-2-iconos;
+        display: block;
+        align-self: center;
+
+        a{
+            display: inline-block;
+            margin: 0;
+            border-style: none;
+
+            &:hover{
+                background-color: white;
+            }
+        }
+    }
+
+    .encabezado-icono{
+        width: 25px;
+    }
+
+    .grilla-trabajos{
+    grid-area: grilla-trabajos;
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows: repeat(7,auto);
+    grid-template-areas:
+    "trabajos-titulo trabajos-titulo"
+    "grilla-trabajo-1 grilla-trabajo-1"
+    "galeria-1 galeria-1"
+    "grilla-trabajo-2 grilla-trabajo-2"
+    "galeria-2 galeria-2"
+    "grilla-trabajo-3 grilla-trabajo-3"
+    "galeria-3 galeria-3";
+    margin: 0;
+
+        h1{
+            font-family: 'Padauk';
+            font-size: 1.5em;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        p{
+            padding: 1em 0;
+        }
+    }
+
+    .trabajos-titulo{
+        grid-area: trabajos-titulo;
+        margin: 0 0 1em 0;
+    }
+
+    .grilla-trabajo-1{
+        grid-area: grilla-trabajo-1;
+        margin: 0 12.5% 1em 12.5%;
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        grid-template-rows:  100%;
+        grid-template-areas:
+        "desc-izquierda foto-derecha";
+    }
+    
+    .desc-izquierda{
+        grid-area: desc-izquierda;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: 0 10% 0 0;
+
+        p{
+            text-align: left;
+        }
+    }
+
+    .grilla-trabajo-2{
+        grid-area: grilla-trabajo-2;
+        margin: 3.5em 12.5% 1em 12.5%;
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        grid-template-rows:  100%;
+        grid-template-areas:
+        "foto-izquierda desc-derecha";
+    }
+
+    .desc-derecha{
+        grid-area: desc-derecha;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: 0 0 0 10%;
+
+        p{
+            text-align: right;
+        }
+
+        .detalles{
+            text-align: right;
+        }
+    }
+
+    .grilla-trabajo-3{
+        grid-area: grilla-trabajo-3;
+        margin: 3.5em 12.5% 1em 12.5%;
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        grid-template-rows:  100%;
+        grid-template-areas:
+        "desc-izquierda foto-derecha";
+    }
+
+    .galeria-1{
+        grid-area: galeria-1;
+        padding: 1em 12.5%;
+        background-color: #dde8ef;
+    }
+
+    .galeria-2{
+        grid-area: galeria-2;
+        padding: 1em 12.5%;
+        background-color: #dde8ef;
+    }
+
+    .galeria-3{
+        grid-area: galeria-3;
+        padding: 1em 12.5%;
+        margin: 0 0 3em 0;
+        background-color: #dde8ef;
+    }
+
+    .contenedor-galeria-flex{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    
+    .foto-galeria{
+        display: block;
+        width: 30%;
+        height: auto;
+        object-fit: cover;
+    }
+}

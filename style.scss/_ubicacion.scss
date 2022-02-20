@@ -1,12 +1,11 @@
-/*Inicio Estructura Pagina 'Servicios' con Grids*/
 /*Inicio Estructura Mobile First*/
-.grilla-cuerpo-servicios{
+.grilla-cuerpo-ubicaciones{
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 100vh auto auto;
     grid-template-areas:
     "encabezado-1"
-    "grilla-servicios-v2"
+    "grilla-ubicaciones-v2"
     "footer";
 }
 
@@ -15,25 +14,24 @@
     display: none; 
 }
 
-.grilla-servicios-v2{
-    grid-area: grilla-servicios-v2;
+.grilla-ubicaciones-v2{
+    grid-area: grilla-ubicaciones-v2;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: auto auto auto;
-    row-gap: 1.5em;
+    grid-template-rows: repeat(11,auto);
+    row-gap: 1em;
     grid-template-areas:
-    "servicios-titulo"
-    "servicio-asistencia-desc"
-    "servicio-asistencia-foto"
-    "servicio-traslado-desc"
-    "servicio-traslado-foto"
-    "servicio-rescate-desc"
-    "servicio-rescate-foto";
-
-    background-color: white;/*
-    border-style: solid;
-    border-color: blue;*/
-
+    "ubicaciones-titulo"
+    "ubicacion-santiago-desc"
+    "ubicacion-santiago-foto"
+    "santiago-mapa"
+    "ubicacion-talca-desc"
+    "ubicacion-talca-foto"
+    "talca-mapa"
+    "ubicacion-temuco-desc"
+    "ubicacion-temuco-foto"
+    "temuco-mapa"
+    "formulario-contacto";
     margin: 1em 10% 3em 10%;
 
     h1{
@@ -48,82 +46,95 @@
         padding: 1em 0;
     }
 
-    .servicios-titulo{
-        grid-area: servicios-titulo;/*
-        border-style: solid;
-        border-color: tomato;*/
+    .ubicaciones-titulo{
+        grid-area: ubicaciones-titulo;
     }
 
-    .servicio-asistencia-desc{
-        grid-area: servicio-asistencia-desc;/*
-        border-style: solid;
-        border-color: turquoise;*/
+    .ubicacion-santiago-desc{
+        grid-area: ubicacion-santiago-desc;
         display: flex;
         flex-flow: column;
         justify-content: space-between;
         align-items: flex-start;
-        margin: 0 10% 0 0;
     }
     
-    .servicio-asistencia-foto{
-        grid-area: servicio-asistencia-foto;/*
-        border-style: solid;
-        border-color: turquoise;*/
+    .ubicacion-santiago-foto{
+        grid-area: ubicacion-santiago-foto;
     
     }
-    .servicio-traslado-desc{
-        grid-area: servicio-traslado-desc;/*
-        border-style: solid;
-        border-color: turquoise;*/
+
+    .santiago-mapa{
+        grid-area: santiago-mapa;
+        background-color: #dde8ef;
         display: flex;
         flex-flow: column;
-        justify-content: space-between;
-        align-items: flex-end;
-        margin: 0 0 0 10%;
+        justify-content: center;
+        align-items: center;
+        padding: 1em 0;
+    }
 
-        p{
-            text-align: right;
-        }
-    }
-    
-    .servicio-traslado-foto{
-        grid-area: servicio-traslado-foto;/*
-        border-style: solid;
-        border-color: turquoise;*/
-    
-    }
-    .servicio-rescate-desc{
-        grid-area: servicio-rescate-desc;/*
-        border-style: solid;
-        border-color: turquoise;*/
+    .ubicacion-talca-desc{
+        grid-area: ubicacion-talca-desc;
         display: flex;
         flex-flow: column;
         justify-content: space-between;
         align-items: flex-start;
-        margin: 0 10% 0 0;
     }
     
-    .servicio-rescate-foto{
-        grid-area: servicio-rescate-foto;/*
-        border-style: solid;
-        border-color: turquoise;*/
+    .ubicacion-talca-foto{
+        grid-area: ubicacion-talca-foto;
+    
+    }
+
+    .talca-mapa{
+        grid-area: talca-mapa;
+        background-color: #dde8ef;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1em 0;
+    }
+
+    .ubicacion-temuco-desc{
+        grid-area: ubicacion-temuco-desc;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .ubicacion-temuco-foto{
+        grid-area: ubicacion-temuco-foto;
+    }
+
+    .temuco-mapa{
+        grid-area: temuco-mapa;
+        background-color: #dde8ef;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1em 0;
+    }
+
+    .formulario-contacto{
+        grid-area: formulario-contacto;
     }
 }
 
 .contenedor-foto-1{
-    display: block;/*
-    border-style: solid;
-    border-color: orange;*/
+    display: block;
 }
 
 @media(min-width:768px) and (max-width:1023px){
-    .grilla-cuerpo-servicios{
+    .grilla-cuerpo-ubicaciones{
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: auto auto auto;
         grid-template-areas:
         "encabezado-2"
-        "grilla-servicios-v2"
+        "grilla-ubicaciones-v2"
         "footer";
     }
 
@@ -218,13 +229,13 @@
 }
 
 @media(min-width:1024px){
-    .grilla-cuerpo-servicios{
+    .grilla-cuerpo-ubicaciones{
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: auto auto auto;
         grid-template-areas:
         "encabezado-2 encabezado-2"
-        "grilla-servicios-v2 grilla-servicios-v2"
+        "grilla-ubicaciones-v2 grilla-ubicaciones-v2"
         "footer footer"
     }
 
@@ -318,20 +329,84 @@
         width: 25px;
     }
 
-    .grilla-servicios-v2{
-        grid-area: grilla-servicios-v2;
+    .grilla-ubicaciones-v2{
+        grid-area: grilla-ubicaciones-v2;
         display: grid;
         grid-template-columns: repeat(2,50%);
-        grid-template-rows: auto auto auto auto;
+        grid-template-rows: repeat(8, auto);
         grid-template-areas:
-        "servicios-titulo servicios-titulo"
-        "servicio-asistencia-desc servicio-asistencia-foto"
-        "servicio-traslado-foto servicio-traslado-desc"
-        "servicio-rescate-desc servicio-rescate-foto";
-        background-color: white;/*
-        border-style: solid;
-        border-color: blue;*/
-        
+        "ubicaciones-titulo ubicaciones-titulo"
+        "ubicacion-santiago-foto ubicacion-santiago-desc"
+        "santiago-mapa santiago-mapa"
+        "ubicacion-talca-desc ubicacion-talca-foto"
+        "talca-mapa talca-mapa"
+        "ubicacion-temuco-foto ubicacion-temuco-desc"
+        "temuco-mapa temuco-mapa"
+        "formulario-contacto formulario-contacto";
         margin: 0 12.5% 3em 12.5%;
+
+        .ubicacion-santiago-desc{
+            grid-area: ubicacion-santiago-desc;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            p{
+                text-align: right;
+            }
+        }
+
+        .ubicacion-talca-desc{
+            grid-area: ubicacion-talca-desc;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            p{
+                text-align: left;
+            }
+        }
+
+        .ubicacion-temuco-desc{
+            grid-area: ubicacion-temuco-desc;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            p{
+                text-align: right;
+            }
+        }
+    }
+
+    .contenedor-contacto-x{
+        background-color: white;
+        padding: 10px;
+        margin: 0px;
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .contenedor-contacto-flex{
+        background-color: white;
+        padding: 10px;
+        margin: 0px;
+        display: flex;
+        flex-flow: column wrap;
+    }
+    
+    .contenedor-contacto-2{
+        background-color: white;
+        padding: 10px;
+        margin: 10px;
+        color: #00375c;
+    }
+    
+    .contenedor-contacto-3{
+        display: inline-block;
+        text-align: center;
+        background-color: white;
     }
 }

@@ -1,305 +1,976 @@
-@import "variables";
-/*Inicio Layout Index con Grids*/
-.cuerpo{
+/*Inicio Estructura Index con Grids*/
+/*Inicio Estructura Mobile First*/
+.grilla-cuerpo-index{
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: auto 5% auto auto auto auto auto;
-    grid-template-areas: 
-    "header"
-    "bloque-azul"
-    "banner"
-    "seccion-ns"
-    "seccion-pe"
-    "seccion-de"
-    "footer"
-    ;
+    grid-template-rows: 100vh auto auto auto auto auto;
+    grid-template-areas:
+    "encabezado-1"
+    "banner-1"
+    "servicios"
+    "valores"
+    "ubicaciones"
+    "footer";
 }
 
-.header{
-    grid-area: header; 
+.encabezado-1{
+    grid-area: encabezado-1;
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 1em;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-image: url('../imagenes/portada.jpg');
+    background-size: cover;
+    background-position-x: 30%;
+    background-position-y: 50%;
 }
 
-.bloque-azul{
-    grid-area: bloque-azul;
-    background-color: $azul-rav;
+.encabezado-2{
+    grid-area: encabezado-2;
+    display: none; 
 }
 
-.banner{
-    grid-area: banner;
+.banner-1{
+    grid-area: banner-1;
+    margin: 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+
+    h1{
+        padding: 0.3em;
+
+    }
+
+    p{
+        padding: 0 0.3em 1em 0.3em;
+    }
+}
+
+.banner-1-contenido{
     position: relative;
+    border-style: solid;
+    border-width: 0.1em;
+    border-color: #003468;
+    margin: 1em 10%;
+    padding: 1em;
+
+    h1{
+        font-family: 'Poppins';
+        font-size: 3em;
+        font-weight: 800;
+        margin: 0;
+        padding: 0;
+    }
+
+    p{
+        padding: 1em 0;
+    }
 }
 
-.seccion-ns{
-    grid-area: seccion-ns;
+.servicios{
+    grid-area: servicios;
+    margin: 1em 0;
 }
 
-.seccion-pe{
-    grid-area: seccion-pe;
+.valores{
+    grid-area: valores;
 }
 
-.seccion-de{
-    grid-area: seccion-de;
+.ubicaciones{
+    grid-area: ubicaciones;
 }
 
 .footer{
     grid-area: footer;
+    background-color: #003468;
 }
-/*Fin Layout Index con Grids*/
 
-/*Inicio Estilos Banner*/
-.banner-contenedor-cta {
-    width: 50%;
-    height: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-family: 'Open Sans';
-    font-weight: 800;
-    font-size: $fuente-grande;
+/*Inicio 'encabezado-1*/
+.header-logo{
+    display: inline-block;
     text-align: center;
-    padding-bottom: 20px;
+}
+
+.nav-lista{
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
+    row-gap: 1em;
     justify-content: center;
+    padding: 0.5em;
+    list-style-type: none;
+    
+    li{
+        display: inline-block;
+        border-style: solid;
+        border-width: 0.1em;
+        border-color: white;
+        font-family: 'Padauk';
+        font-size: 1.3rem;
+        font-weight: 800;
+        color: red;
+        text-align: center;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        text-shadow: 2px 2px black;
+    }
+
+    a{
+        display: block;
+        padding: 0.5em 1em;
+        color: white;
+
+        &:hover{
+            background-color: white;
+            color: #005c99;
+            text-shadow: none;
+        }
+
+        &:active{
+            color: white;
+            background-color: #005c99;
+        }
+    }
+}
+
+.encabezado-flecha-abajo{
+    display: inline-block;
+    position: relative;
+    height: 10%;
+}
+
+/*Inicio Animacion*/
+.flecha-animada{
+    animation: arriba-abajo 1s linear infinite;
+    position: relative;
+    left: 0;
+    bottom: 0;
+}
+
+@keyframes arriba-abajo {
+    0%, 100% {
+      transform: translateY(10px);
+    }
+    50% {
+      transform: translateY(0px);
+    }
+}
+/*Fin Animacion*/
+/*Fin 'encabezado-1*/
+
+/*Inicio 'encabezado-2*/
+/*Inicio Media Query*/
+@media(min-width:768px) and (max-width:1023px){
+    .grilla-cuerpo-index{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto 75vh auto auto auto auto;
+        grid-template-areas:
+        "encabezado-2"
+        "banner-1"
+        "servicios"
+        "valores"
+        "ubicaciones"
+        "footer"
+        ;
+    }
+
+    .encabezado-1{
+        grid-area: encabezado-1;
+        display: none;
+    }
+
+    .encabezado-2{
+        grid-area: encabezado-2;
+        display: grid;
+        grid-template-columns: repeat(7,14.27%);
+        grid-template-rows: 100%;
+        grid-template-areas:
+        "enc-2-logo enc-2-inicio enc-2-servicios enc-2-ubicacion enc-2-trabajos enc-2-nosotros enc-2-iconos";
+        padding: 1em 0;
+        font-family: 'Padauk';
+        font-size: 1rem;
+        text-align: center;
+        color: #003468;
+
+        a{
+            display: block;
+            margin: 0 0.5em;
+            border-style: solid;
+            border-width: 0.1em;
+            border-color: #003468;
+            padding: 0.5em 0;
+            height: 100%;
+            color: #003468;
+
+            &:hover{
+                background-color: #003468;
+                color: white;
+            }
+        }
+    }
+
+    .enc-2-logo{
+        grid-area: enc-2-logo;
+        align-self: center;
+
+        a{
+            display: block;
+            border-style: none;
+
+            &:hover{
+                background-color: white;
+            }
+        }
+    }
+
+    .enc-2-inicio{
+        grid-area: enc-2-inicio;
+        align-self: center;
+    }
+
+    .enc-2-servicios{
+        grid-area: enc-2-servicios;
+        align-self: center;
+    }
+
+    .enc-2-ubicacion{
+        grid-area: enc-2-ubicacion;
+        align-self: center;
+    }
+
+    .enc-2-trabajos{
+        grid-area: enc-2-trabajos;
+        align-self: center;
+    }
+
+    .enc-2-nosotros{
+        grid-area: enc-2-nosotros;
+        align-self: center;
+    }
+
+    .enc-2-iconos{
+        grid-area: enc-2-iconos;
+        display: block;
+        align-self: center;
+
+        a{
+            display: inline-block;
+            margin: 0;
+            border-style: none;
+
+            &:hover{
+                background-color: white;
+            }
+        }
+    }
+
+    .encabezado-icono{
+        width: 25px;
+    }
+
+    .banner-1{
+        grid-area: banner-1;
+        background-image: url('../imagenes/portada.jpg');
+        background-size: cover;
+        background-position-x: 10%;
+        background-position-y: 50%;
+        width: 100%;
+        color: white;
+        font-weight: 400;
+        text-shadow: 1.5px 1px rgb(0, 0, 0);
+        margin: 0;
+        padding: 0;
+    }
+
+    .banner-1-contenido{
+        position: relative;
+        margin: 0 10%;
+        border-style: none;
+        background-color: #00000025;
+    }
+}
+
+
+@media(min-width:1024px){
+    .grilla-cuerpo-index{
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        grid-template-rows: auto 75vh auto auto auto auto;
+        grid-template-areas:
+        "encabezado-2 encabezado-2"
+        "banner-1 banner-2"
+        "servicios servicios"
+        "valores valores"
+        "ubicaciones ubicaciones"
+        "footer footer"
+        ;
+    }
+
+    .encabezado-1{
+        display: none;
+    }
+
+    .encabezado-2{
+        grid-area: encabezado-2;
+        display: grid;
+        grid-template-columns: repeat(7,14.27%);
+        grid-template-rows: 100%;
+        grid-template-areas:
+        "enc-2-logo enc-2-inicio enc-2-servicios enc-2-ubicacion enc-2-trabajos enc-2-nosotros enc-2-iconos";
+        padding: 1em 0;
+        text-align: center;
+    
+        a{
+            display: block;
+            margin: 0 0.5em;
+            border-style: solid;
+            border-width: 0.1em;
+            border-color: #003468;
+            padding: 0.5em 0;
+            height: 100%;
+            color: #003468;
+
+            &:hover{
+                background-color: #003468;
+                color: white;
+            }
+        }
+    }
+
+    .enc-2-logo{
+        grid-area: enc-2-logo;
+        align-self: center;
+
+        a{
+            display: block;
+            border-style: none;
+
+            &:hover{
+                background-color: white;
+            }
+        }
+    }
+
+    .enc-2-inicio{
+        grid-area: enc-2-inicio;
+        align-self: center;
+    }
+
+    .enc-2-servicios{
+        grid-area: enc-2-servicios;
+        align-self: center;
+    }
+
+    .enc-2-ubicacion{
+        grid-area: enc-2-ubicacion;
+        align-self: center;
+    }
+
+    .enc-2-trabajos{
+        grid-area: enc-2-trabajos;
+        align-self: center;
+    }
+
+    .enc-2-nosotros{
+        grid-area: enc-2-nosotros;
+        align-self: center;
+    }
+
+    .enc-2-iconos{
+        grid-area: enc-2-iconos;
+        display: block;
+        align-self: center;
+
+        a{
+            display: inline-block;
+            margin: 0;
+            border-style: none;
+
+            &:hover{
+                background-color: white;
+            }
+        }
+    }
+
+    .encabezado-icono{
+        width: 25px;
+    }
+
+    .banner-1-contenido{
+        border-style: none;
+    }
+    
+    .banner-2{
+        grid-area: banner-2;
+        background-image: url('../imagenes/portada.jpg');
+        background-size: cover;
+    }
+}
+/*Fin Encabezado*/
+
+/*Inicio 'grilla-servicios*/
+/*Inicio mobile first*/
+.grilla-servicios{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6,auto);
+    row-gap: 1em;
+    grid-template-areas:
+    "desc-servicio-1"
+    "foto-servicio-1"
+    "desc-servicio-2"
+    "foto-servicio-2"
+    "desc-servicio-3"
+    "foto-servicio-3"
+    ;
+}
+
+.desc-servicio-1{
+    grid-area: desc-servicio-1;
+}
+
+.foto-servicio-1{
+    grid-area: foto-servicio-1;
+}
+
+.desc-servicio-2{
+    grid-area: desc-servicio-2;
+}
+
+.foto-servicio-2{
+    grid-area: foto-servicio-2;
+}
+
+.desc-servicio-3{
+    grid-area: desc-servicio-3;
+}
+
+.foto-servicio-3{
+    grid-area: foto-servicio-3;
+}
+
+.contenedor-desc-derecha{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-content: space-around;
+    align-items: flex-end;
+    height: 100%;
+    margin: 0 10%;
+    text-align: right;
+
+    h2{
+        display: inline-block;
+        text-align: right;
+        margin-bottom: 1em;
+    }
+
+    p{
+        display: inline-block;
+        text-align: justify;
+        margin-bottom: 1em;
+    }
+}
+
+.contenedor-foto-izquierda{
+    display: block;
+    margin: 0 10%;
+    height: 100%;
+}
+
+.contenedor-desc-izquierda{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-content: space-around;
+    align-items: flex-start;
+    height: 100%;
+    margin: 0 10%;
+    text-align: right;
+
+    h2{
+        display: inline-block;
+        text-align: right;
+        margin-bottom: 1em;
+    }
+
+    p{
+        display: inline-block;
+        text-align: justify;
+        margin-bottom: 1em;
+    }
+
+    h3{
+        display: inline-block;
+        text-align: right;
+        margin-bottom: 0;
+    }
+}
+
+.contenedor-foto-derecha{
+    display: block;
+    margin: 0 10%;
+    height: 100%;
+}
+/*Fin mobile first */
+
+/*Inicio de media query para 'grilla-servicios'*/
+@media(min-width:1024px) {
+    .grilla-servicios{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2,50%);
+        grid-template-rows: repeat(3,auto);
+        row-gap: 1em;
+        grid-template-areas:
+        "foto-servicio-1 desc-servicio-1"
+        "desc-servicio-2 foto-servicio-2"
+        "foto-servicio-3 desc-servicio-3"
+        ;
+    }
+
+    .contenedor-desc-derecha{
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        align-content: space-around;
+        align-items: flex-end;
+        height: 100%;
+        margin-right: 25%;
+        text-align: right;
+
+        h2{
+            display: inline-block;
+            text-align: right;
+            margin-bottom: 0;
+        }
+    
+        p{
+            display: inline-block;
+            text-align: right;
+            margin-bottom: 0;
+        }
+    }
+
+    .contenedor-foto-izquierda{
+        display: block;
+        margin: 0 0 0 25%;
+        height: 100%;
+    }
+
+    .contenedor-desc-izquierda{
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        align-content: space-around;
+        align-items: flex-start;
+        height: 100%;
+        margin: 0 10% 0 25%;
+        text-align: right;
+
+        h2{
+            display: inline-block;
+            text-align: right;
+            margin-bottom: 0;
+        }
+    
+        p{
+            display: inline-block;
+            text-align: justify;
+            margin-bottom: 0;
+        }
+
+        h3{
+            display: inline-block;
+            text-align: right;
+            margin-bottom: 0;
+        }
+    }
+
+    .contenedor-foto-derecha{
+        display: block;
+        margin: 0 25% 0 0;
+        height: 100%;
+    }
+
+}
+/*Fin 'grilla-servivios*/
+
+/*Inicio 'grilla-valores*/
+.grilla-valores{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3,auto);
+    grid-template-areas:
+    "title"
+    "pe-desc"
+    "valores"
+    ;
+    background-color: #003468;
+    margin: 1.5em 10%;
+    color: white;
+}
+
+.title{
+    grid-area: title;
+    margin: 0;
+
+    h1{
+        margin-bottom: 0;
+        padding: 0.3em;
+        text-align: center;
+    }
+}
+
+.pe-desc{
+    grid-area: pe-desc;
+    margin: 0% 10%;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.contenedor-valores{
+    grid-area: valores;
+    margin: 0% 10%;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
     align-items: center;
     align-content: center;
 }
 
-.banner-contenedor-cta p{
-    font-family: 'Rubik';
-    font-weight: 400;
-    font-size: $fuente-mediana;
-    color: white;
-    text-shadow: 2px 2px #00000096;
-    text-align: center;
-    margin-bottom: 10px;
-    padding-top: 20px;
-}
-/*Fin Estilos Banner*/
+.valor{
+    display: inline-block;
+    padding: 1em;
 
-/*Inicio Animaciones Banner*/
-/*Animaciones*/
-.texto-animado-fade-h2{
-    font-family: 'Open Sans';
-    font-weight: 200;
-    text-shadow: 2px 2px #00000096;
-    animation-duration: 2s;
-    animation-name: fade;
-}
-
-@keyframes fade{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-
-.texto-animado-fade{
-    animation-duration: 2s;
-    animation-name: fade;
-}
-
-@keyframes fade{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-
-.texto-animado-zoom{
-    font-family: 'Open Sans';
-    font-weight: 800;
-    text-shadow: 2px 2px #00000096;
-    animation-name: zoom;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes zoom{
-    0% {opacity:0;}
-    100% {opacity:1;}
-
-    from{
-        transform: scale(1);
-    }
-    to{
-        transform: scale(2);
-    }
-}
-/*Fin Animaciones Banner*/
-
-/*Inicio Media Queries para Banner*/
-@media(max-width:576px){
-    .banner-contenedor-cta{
-        height: 75%;
-    }
-    .banner-contenedor-cta p{
-        font-size: 0.6rem;
-    }
-
-    .texto-animado-fade-h2{
-        font-family: 'Open Sans';
+    h2{
+        padding: 0.3em 0 0 0;
+        margin: 0;
+        font-size: 1.5em;
+        font-family: 'Padauk';
         font-weight: 800;
-        font-size: $fuente-semi-mediana;
-        animation-duration: 2s;
-        animation-name: fade;
     }
-
-    .texto-animado-zoom{
-        font-family: 'Open Sans';
-        font-weight: 800;
-        font-size: $fuente-semi-mediana;
-        animation-name: zoom;
-        animation-duration: 2s;
-        animation-fill-mode: forwards;
+    
+    p{
+        padding: 0.5em 0;
+        margin: 0;
+        font-weight: 400;
+        text-align: center;
     }
 }
 
-@media(min-width:577px) and (max-width:768px){
-    .banner-contenedor-cta{
-        height: 75%;
-    }
-    .banner-contenedor-cta p{
-        font-size: $fuente-semi-mediana;
-    }
-
-    .texto-animado-fade-h2{
-        font-family: 'Open Sans';
-        font-weight: 800;
-        font-size: $fuente-mediana;
-        animation-duration: 2s;
-        animation-name: fade;
-    }
-
-    .texto-animado-zoom{
-        font-family: 'Open Sans';
-        font-weight: 800;
-        font-size: $fuente-mediana;
-        animation-name: zoom;
-        animation-duration: 2s;
-        animation-fill-mode: forwards;
-    }
+.valor-icon{
+    width: 5em;
 }
-@media(min-width:769px) and (max-width:992px){
-    .banner-contenedor-cta{
-        height: 75%;
+
+@media(min-width:768px) and (max-width:1023px) {
+    .grilla-valores{
+        margin: 3em 12.5%;
     }
-    .banner-contenedor-cta p{
-        font-size: $fuente-mediana;
+    
+}
+
+@media(min-width:1024px) {
+    .grilla-valores{
+        margin: 3em 12.5%;
     }
 
-    .texto-animado-fade-h2{
-        font-family: 'Open Sans';
-        font-weight: 800;
-        font-size: $fuente-semi-grande;
-        animation-duration: 2s;
-        animation-name: fade;
-    }
+}
+/*Fin 'grilla-valores*/
 
-    .texto-animado-zoom{
-        font-family: 'Open Sans';
-        font-weight: 800;
-        font-size: $fuente-semi-grande;
-        animation-name: zoom;
-        animation-duration: 2s;
-        animation-fill-mode: forwards;
+.bloque-5-0{
+    p{
+        margin: 0 10%;
+        padding: 1em 0;
     }
 }
 
-@media(min-width:993px){
-    .banner-contenedor-cta{
-        height: 75%;
-    }
-    .banner-contenedor-cta p{
-        font-size: $fuente-semi-grande;
-    }
-    .texto-animado-fade-h2{
-        font-family: 'Open Sans';
-        font-weight: 800;
-        font-size: $fuente-grande;
-        animation-duration: 2s;
-        animation-name: fade;
-    }
-    .texto-animado-zoom{
-        font-family: 'Open Sans';
-        font-weight: 800;
-        font-size: $fuente-grande;
-        animation-name: zoom;
-        animation-duration: 2s;
-        animation-fill-mode: forwards;
+@media(min-width:768px){
+    .bloque-5-0{
+        p{
+            margin: 0 12.5%;
+            text-align: center;
+        }
     }
 }
-/*Fin Media Queries para Banner*/
 
-/*Inicio Layout Seccion 'Donde Estamos' con Grids*/
-.seccion-de-ubicaciones{
+/*Inicio 'grilla-ubicaciones*/
+/*MOBILE FIRST*/
+.grilla-ubicaciones{
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: repeat(3,auto);
-    grid-column-gap: 0%;
-    grid-row-gap: 0%;
-    grid-template-areas: 
-    "foto-santiago"
-    "foto-talca"
-    "foto-temuco"
+    grid-template-areas:
+    "ubicacion-1"
+    "ubicacion-2"
+    "ubicacion-3"
     ;
 }
 
-.foto-santiago{
-    grid-area: foto-santiago;
+.ubicacion-1{
+    grid-area: ubicacion-1;
+    display: block;
     position: relative;
+    background-color: #dde8ef;
+    padding: 1em 0;
 }
 
-.foto-talca{
-    grid-area: foto-talca;
+.ubicacion-2{
+    grid-area: ubicacion-2;
+    display: block;
     position: relative;
+    background-color: #dde8ef;
+    padding: 1em 0;
 }
 
-.foto-temuco{
-    grid-area: foto-temuco;
+.ubicacion-3{
+    grid-area: ubicacion-3;
+    display: block;
     position: relative;
-
-}
-/*Fin Layout Seccion 'Donde Estamos' con Grids*/
-
-.foto-ubicacion{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    background-color: #dde8ef;
+    padding: 1em 0;
 }
 
-/*Inicio Media Query para Seccion 'Donde Estamos*/
-@media(min-width:768px){
-    .seccion-de-ubicaciones{
-        display: grid;
-        grid-template-columns: repeat(3,auto);
-        grid-template-rows: 100%;
-        grid-column-gap: 0%;
-        grid-row-gap: 0%;
-        grid-template-areas: 
-        "foto-santiago  foto-talca  foto-temuco"
-        ;
+.contenedor-ubicacion-izquierda{
+    display: block;
+    position: relative;
+    margin: 0 10%;
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(68, 67, 67, 0.589);
+    background-color: white;
+    padding: 1em;
+
+    p{
+        padding: 1em 0;
     }
 }
-/*Fin Media Query para Seccion 'Donde Estamos*/
 
-/*Inicio Estilos de Seccion 'Donde Estamos'*/
-.ubicacion-cta {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-family: 'Open Sans';
-    font-weight: 800;
-    font-size: $fuente-grande;
-    text-align: center;
-    margin: 0%;
+.contenedor-ubicacion-derecha{
+    display: block;
+    position: relative;
+    margin: 0 10%;
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(68, 67, 67, 0.589);
+    background-color: white;
+    padding: 1em;
+
+    p{
+        padding: 1em 0;
+    }
 }
-/*Fin Estilos de Seccion 'Donde Estamos'*/
+
+.contenedor-ubicacion-centro{
+    display: block;
+    position: relative;
+    margin: 0 10%;
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(68, 67, 67, 0.589);
+    background-color: white;
+    padding: 1em;
+
+    p{
+        padding: 1em 0;
+    }
+}
+
+
+.foto-ubicacion{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+/*Inicio media query 'grilla-ubicaciones'*/
+@media(min-width:768px) and (max-width:1023px){
+    .grilla-ubicaciones{
+        display: grid;
+        margin-bottom: 1em;
+        grid-template-columns: repeat(3,33.33%);
+        grid-template-rows: 100%;
+        grid-template-areas:
+        "ubicacion-1 ubicacion-2 ubicacion-3"
+        ;
+    }
+
+    .contenedor-ubicacion-izquierda{
+        margin: 0 0 0 37.5%;
+    }
+
+    .contenedor-ubicacion-derecha{
+        margin: 0 37.5% 0 0;
+    }
+
+    .contenedor-ubicacion-centro{
+        margin-left: 18.75%;
+        margin-right: 18.75%;
+    }
+}
+
+@media(min-width:1024px){
+    .grilla-ubicaciones{
+        display: grid;
+        margin-bottom: 3em;
+        grid-template-columns: repeat(3,33.33%);
+        grid-template-rows: 100%;
+        grid-template-areas:
+        "ubicacion-1 ubicacion-2 ubicacion-3"
+        ;
+    }
+
+    .contenedor-ubicacion-izquierda{
+        margin: 0 0 0 37.5%;
+    }
+
+    .contenedor-ubicacion-derecha{
+        margin: 0 37.5% 0 0;
+    }
+
+    .contenedor-ubicacion-centro{
+        margin-left: 18.75%;
+        margin-right: 18.75%;
+    }
+}
+
+/*Inicio 'grilla-footer'*/
+/*Inicio Mobile First*/
+.grilla-footer{
+    display: grid;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "footer-varios"
+    "footer-enlaces"
+    "footer-contacto";
+    color: white;
+}
+
+.footer-varios{
+    grid-area: footer-varios;
+}
+
+.footer-enlaces{
+    grid-area: footer-enlaces;
+}
+
+.footer-contacto{
+    grid-area: footer-contacto;
+}
+
+
+.contenedor-footer-varios{
+    margin: 0 10%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: space-between;
+    margin: 0 0 1em 0;
+
+    p{
+        padding: 1em 0;
+        margin-bottom: 0;
+        text-align: center;
+    }
+}
+
+.contenedor-enlaces{
+    border-top: 0.1em solid white;
+    margin: 0 10%;
+    height: 100%;
+
+    a{
+        color: white;
+
+        &:hover{
+            background-color: white;
+            color: #003468;
+        }
+
+        &:visited:hover{
+            color: #003468;
+        }
+    }
+}
+
+.contenedor-contacto{
+    margin: 0 10%;
+    height: 100%;
+
+    ul{
+        li{
+            margin-bottom: 1.5em;
+        }
+    }
+}
+
+.rr-ss{
+    display: flex;
+    flex-flow: row;
+    gap: 1em;
+    justify-content: center;
+    align-content: center;
+}
+/*Fin Mobile First*/
+
+@media(min-width:1024px){
+    .grilla-footer{
+        display: grid;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        grid-template-columns: repeat(3,33.33%);
+        grid-template-rows: 100%;
+        grid-template-areas:
+        "footer-varios footer-enlaces footer-contacto"
+        ;
+    }
+
+    .footer-varios{
+        grid-area: footer-varios;
+        display: block;
+    }
+
+    .contenedor-footer-varios{
+        margin: 0 0 0 37.5%;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: space-between;
+        margin: 0;
+
+        p{
+            padding: 1em 0;
+            margin-bottom: 0;
+            text-align: center;
+        }
+    }
+
+    .contenedor-enlaces{
+        margin: 0 18.75%;;
+        height: 100%;
+        border-top: none;
+    }
+
+    .contenedor-contacto{
+        margin: 0 37.5% 0 0;
+        height: 100%;
+    }
+
+    .rr-ss{
+        display: flex;
+        flex-flow: row;
+        gap: 1em;
+        justify-content: center;
+        align-content: center;
+    }
+}
+/*Fin 'grilla-footer'*/
