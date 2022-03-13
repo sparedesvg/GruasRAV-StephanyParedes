@@ -826,9 +826,9 @@ a {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -ms-flex-line-pack: center;
       align-content: center;
 }
@@ -866,6 +866,9 @@ a {
 @media (min-width: 1024px) {
   .grilla-valores {
     margin: 3em 12.5%;
+  }
+  .valor {
+    width: 30%;
   }
 }
 
@@ -1228,9 +1231,6 @@ a {
   row-gap: 1.5em;
       grid-template-areas: "servicios-titulo" "servicio-asistencia-desc" "servicio-asistencia-foto" "servicio-traslado-desc" "servicio-traslado-foto" "servicio-rescate-desc" "servicio-rescate-foto";
   background-color: white;
-  /*
-    border-style: solid;
-    border-color: blue;*/
   margin: 1em 10% 3em 10%;
 }
 
@@ -1250,18 +1250,12 @@ a {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: servicios-titulo;
-  /*
-        border-style: solid;
-        border-color: tomato;*/
 }
 
 .grilla-servicios-v2 .servicio-asistencia-desc {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: servicio-asistencia-desc;
-  /*
-        border-style: solid;
-        border-color: turquoise;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1282,18 +1276,12 @@ a {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: servicio-asistencia-foto;
-  /*
-        border-style: solid;
-        border-color: turquoise;*/
 }
 
 .grilla-servicios-v2 .servicio-traslado-desc {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: servicio-traslado-desc;
-  /*
-        border-style: solid;
-        border-color: turquoise;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1318,18 +1306,12 @@ a {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: servicio-traslado-foto;
-  /*
-        border-style: solid;
-        border-color: turquoise;*/
 }
 
 .grilla-servicios-v2 .servicio-rescate-desc {
   -ms-grid-row: 6;
   -ms-grid-column: 1;
   grid-area: servicio-rescate-desc;
-  /*
-        border-style: solid;
-        border-color: turquoise;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1350,16 +1332,10 @@ a {
   -ms-grid-row: 7;
   -ms-grid-column: 1;
   grid-area: servicio-rescate-foto;
-  /*
-        border-style: solid;
-        border-color: turquoise;*/
 }
 
 .contenedor-foto-1 {
   display: block;
-  /*
-    border-style: solid;
-    border-color: orange;*/
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -1610,9 +1586,6 @@ a {
         grid-template-rows: auto auto auto auto;
         grid-template-areas: "servicios-titulo servicios-titulo" "servicio-asistencia-desc servicio-asistencia-foto" "servicio-traslado-foto servicio-traslado-desc" "servicio-rescate-desc servicio-rescate-foto";
     background-color: white;
-    /*
-        border-style: solid;
-        border-color: blue;*/
     margin: 0 12.5% 3em 12.5%;
   }
 }

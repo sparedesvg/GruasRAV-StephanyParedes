@@ -30,10 +30,7 @@
     "servicio-rescate-desc"
     "servicio-rescate-foto";
 
-    background-color: white;/*
-    border-style: solid;
-    border-color: blue;*/
-
+    background-color: white;
     margin: 1em 10% 3em 10%;
 
     h1{
@@ -49,15 +46,11 @@
     }
 
     .servicios-titulo{
-        grid-area: servicios-titulo;/*
-        border-style: solid;
-        border-color: tomato;*/
+        grid-area: servicios-titulo;
     }
 
     .servicio-asistencia-desc{
-        grid-area: servicio-asistencia-desc;/*
-        border-style: solid;
-        border-color: turquoise;*/
+        grid-area: servicio-asistencia-desc;
         display: flex;
         flex-flow: column;
         justify-content: space-between;
@@ -66,15 +59,10 @@
     }
     
     .servicio-asistencia-foto{
-        grid-area: servicio-asistencia-foto;/*
-        border-style: solid;
-        border-color: turquoise;*/
-    
+        grid-area: servicio-asistencia-foto;
     }
     .servicio-traslado-desc{
-        grid-area: servicio-traslado-desc;/*
-        border-style: solid;
-        border-color: turquoise;*/
+        grid-area: servicio-traslado-desc;
         display: flex;
         flex-flow: column;
         justify-content: space-between;
@@ -87,15 +75,10 @@
     }
     
     .servicio-traslado-foto{
-        grid-area: servicio-traslado-foto;/*
-        border-style: solid;
-        border-color: turquoise;*/
-    
+        grid-area: servicio-traslado-foto;
     }
     .servicio-rescate-desc{
-        grid-area: servicio-rescate-desc;/*
-        border-style: solid;
-        border-color: turquoise;*/
+        grid-area: servicio-rescate-desc;
         display: flex;
         flex-flow: column;
         justify-content: space-between;
@@ -104,16 +87,12 @@
     }
     
     .servicio-rescate-foto{
-        grid-area: servicio-rescate-foto;/*
-        border-style: solid;
-        border-color: turquoise;*/
+        grid-area: servicio-rescate-foto;
     }
 }
 
 .contenedor-foto-1{
-    display: block;/*
-    border-style: solid;
-    border-color: orange;*/
+    display: block;
 }
 
 @media(min-width:768px) and (max-width:1023px){
@@ -328,10 +307,7 @@
         "servicio-asistencia-desc servicio-asistencia-foto"
         "servicio-traslado-foto servicio-traslado-desc"
         "servicio-rescate-desc servicio-rescate-foto";
-        background-color: white;/*
-        border-style: solid;
-        border-color: blue;*/
-        
+        background-color: white;
         margin: 0 12.5% 3em 12.5%;
     }
 }
